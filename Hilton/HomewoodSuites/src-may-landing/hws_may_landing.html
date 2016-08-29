@@ -1,0 +1,364 @@
+<!doctype html> <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head>
+		
+	</head>
+	<body>
+		<style type="text/css">
+			
+			/* @import url("http://homewoodsuites.hilton.com/en/promotions/media/images/tintin/jquery-fancybox-1-3-4.css"); */
+				
+			.search {
+				display: none;
+			}
+			
+			#min-height {
+				position: relative;
+				width: 100%;
+			}
+			
+			#promoSearchForm {
+				position: absolute;
+				top: 135px;
+				left: 30px;
+				padding: 0;
+				margin: 0;
+				width: 215px;
+				overflow: visible;
+				font:normal 13px/18px verdana;
+			}
+			
+			@media screen and (-webkit-min-device-pixel-ratio:0) {
+				#promoSearchForm td td td td table {
+					top: 124px;
+				}
+				.fsFormSearchButton {
+					top:260px;
+				}
+			}
+			
+			#promoSearchForm .specialsText3 {
+				color: #000000;
+				font-size:11px;
+			}
+			
+			#promoSearchForm table {
+				background-color: transparent;
+			}
+			
+			#promoSearchForm .formOB, #promoSearchForm select {
+				border:1px solid #666;
+			}
+			
+			#promoSearchForm .formOB {
+				width: 160px;
+			}
+			
+			#promoSearchForm td td td td table {
+				position:absolute;
+				left:35px;
+				top: 120px;
+				_top: 126px;
+				width:140px;
+			}
+			
+			#promoSearchForm td td td td table input {
+				margin: 0;
+			}
+			
+			/* hide the 'Find a participating hotel graphic */
+			img.imgFindParticipating {
+				display:none;
+			}
+			
+			/* the form can now have a find-it button that matches the design */
+			.fsFormSearchButton {
+				width: 136px /* width of button image */;
+				height: 36px /* height of button image */;
+				background:transparent url(http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/book_now_button.png) no-repeat top left;
+				position:absolute;
+				left:35px;
+				top:260px;
+			}
+			
+			.fsFormSearchButton img {
+				display:none;
+			}
+			
+			.promoSearchSubmit {
+				width: 145px /* width of button image */;
+				height: 53px /* height of button image */;
+				opacity: 0;
+				-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				filter: alpha(opacity=0);
+			}
+			
+			/* the form can now have a calendar icons that match the design */
+			#promoSearchForm a.imgCalendar {
+				background: transparent url(http://homewoodsuites.hilton.com/en/promotions/media/images/hx_awaw/hpaw-calendar.jpg) no-repeat top left;
+				display:block;
+			}
+			
+			#promoSearchForm img.imgCalendar {
+				opacity: 0;
+				filter: alpha(opacity=0);
+			}
+			
+			#promoSearchForm td td td td table td {
+				white-space:nowrap;
+			}
+			
+			@media screen and (-webkit-min-device-pixel-ratio:0) {
+				#promoSearchForm td td td td table {
+					top: 124px;
+				}
+				
+				.fsFormSearchButton {
+					top:250px;
+				}
+			}
+			
+			/* --- remove find property link--- */ 
+			#min-height td {
+				padding: 0 !important;
+			}
+			
+			a[href="#find"]{
+				display: none;
+			}
+			 
+			#hws_content img {
+				border:0;
+			}
+			
+			#hws_content .imgurl {
+				display:inline-block;
+			}
+			
+			#hws_content .bold_text {
+				font-weight:bold;
+			}
+			
+			#hws_content {
+				width: 975px;
+				font-family: arial,helvetica,sans-serif;
+			}
+			
+			#hws_content .hws_main_content {
+				background: url(http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/background.jpg) no-repeat;
+				height: 910px;
+				width: 975px;
+				position: relative;
+			}
+			
+			#hws_content .booking_widget {
+				padding: 35px 30px 0;
+				height: 363px;
+				width: 178px;
+				position: absolute;
+				top: 0;
+				left: 29px;
+			}
+			
+			#hws_content .booking_widget .find_a_hotel {
+				margin-bottom: 10px;
+			}
+			
+			#hws_content .booking_widget .book_now_button {
+				margin-top: 20px;
+			}
+			
+			#hws_content .masthead {
+				background: url(img/masthead_image.jpg) no-repeat;
+				height: 398px;
+				width: 678px;
+				position: absolute;
+				top: 0;
+				right: 30px;
+				z-index: 1;
+			}
+			
+			#hws_content .headline {
+				position: absolute;
+				bottom: 10px;
+				left: 175px;
+			}
+			
+			#hws_content .body_content {
+				width: 640px;
+				position: absolute;
+				top: 420px;
+				left: 266px;
+			}
+			
+			#hws_content .body_copy, #hws_content .body_copy_disclaimer {
+				padding: 10px 0;
+				font-size: 14px;
+				line-height: 20px;
+				color: #424242;
+			}
+			
+			#hws_content .body_copy a {
+				color: #0294ab;
+				font-weight: bold;
+			}
+			
+			#hws_content .body_copy_disclaimer {
+				font-size:12px;
+				font-style: italic;
+			}
+			
+			#hws_content .hhonors_content {
+				width: 319px;
+				float: left;
+				text-align: center;
+			}
+			
+			#hws_content .hhonors_header {
+				margin: 10px 0;
+			}
+			
+			#hws_content .hhonors_divider {
+				float: left;
+			}
+			
+			#hws_content .sign_up_button, #hws_content .sign_in_button {
+				height: 19px;
+				width: 68px;
+				margin: 15px 125px;
+			}
+			
+			#hws_content .sign_up_button {
+				background: url(http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/sign_up_cta.png) no-repeat;
+			}
+			
+			#hws_content .sign_in_button {
+				background: url(http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/sign_in_cta.png) no-repeat;
+			}
+			
+			#hws_content .sign_up_button:hover, #hws_content .sign_in_button:hover {
+				background-position: bottom left;
+			}
+			
+			#hws_content .learn_more_cta {
+				background: url(http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/learn_more_cta.png) no-repeat;
+				height: 19px;
+				width: 92px;
+			}
+			
+			#hws_content .learn_more_cta:hover {
+				background-position:0 -19px;
+			}
+			
+			#hws_content .jdpower_award {
+				position: absolute;
+				bottom: 38px;
+				left: 62px;
+			}
+			
+			#hws_content .jdpower_award_text {
+				position: absolute;
+				bottom: 60px;
+				left: 146px;
+			}
+			
+			#hws_content .jdp_learn_more {
+				margin-top: 6px;
+			}
+			
+			#hws_content .hws_cta_text {
+				background: url(http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/hws_cta_text.png) no-repeat;
+				height: 19px;
+				width: 251px;
+				position: absolute;
+				bottom: 60px;
+				right: 65px;
+			}
+			
+			#hws_content .hws_cta_text:hover {
+				background-position: 0 -19px;
+			}
+			
+			#hws_content .hws_main_content .hhonors_logo {
+				position: absolute;
+				top: 20px;
+				right: 50px;
+				z-index: 2;
+			}
+			 
+			#hws_content .disclaimer {
+				margin: 0 30px 20px;
+				text-align: left;
+				font-size: 10px;
+				color: #75767a;
+			}
+
+
+
+			
+		</style>
+		<div id="hws_content">
+			<div class="hws_main_content">
+				<div class="hhonors_logo">
+					<img src="img/hhonors_logo_white.png" height="31" width="142" alt="Hilton HHonors™">
+				</div>
+				<div class="booking_widget">
+					<div class="find_a_hotel">
+						<img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/find_a_hotel.png" height="12" width="95" alt="FIND A HOTEL" />
+					</div>
+				</div>
+				<div class="masthead">
+					<div class="headline">
+						<img src="img/masthead_copy.png" height="83" width="342" alt="Plenty of room to simply be at home." />
+					</div>
+				</div>
+				<div class="body_content">
+					<div class="body_copy">
+						<img src="img/headline.png" width="477" height="16" border="0" alt="Save 15% on summer stays booked in may." />
+					</div>
+					<div class="body_copy">
+						Get all the comforts of home, including a full-size refrigerator and kitchen in every suite. Hilton HHonors&trade; members 
+						can <a href="http://homewoodsuites3.hilton.com/en_US/hw/search/findhotels/index.htm?xch=1307073458,E5C03A17F040B1082D53F9F0C86CED9F.etc54&it=Tnav,Res">book now and get 15% off*</a> our Best Available Rates for any Thursday through Sunday stay at
+						<strong>Homewood Suites by Hilton&trade;</strong> locations through September 3, 2012.
+					</div>
+					<div class="body_copy_disclaimer">
+						*You must be an HHonors member to participate in this offer. Offer is only available to the HHonors member that is the
+						recipient of this mail piece and is non-transferable. Subject to availability at participating Homewood Suites hotels 
+						for stays booked between April 27, 2012 through June 3, 2012 and completed from May 1, 2012 through September 3, 2012.
+						Rate is valid for stays on Thursday - Sunday only. The discount rate relates to the hotel's "Best Available Rate" which
+						is a specific rate type that varies depending on time of purchase, is unrestricted, non-qualified and excludes discount
+						rates. Availability and rate will be confirmed at time of booking and will vary by property, length of stay, date and are
+						based on occupancy per room. Rate does not include resort/service fees, taxes, incidental charges or gratuities. Other 
+						restrictions may apply. &copy;2012 Hilton Worldwide.
+					</div>
+				</div>
+				<div class="jdpower_award">
+					<img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/jdpower_award.png" height="96" width="63" alt="JD Power Award" />
+				</div>
+				<div class="jdpower_award_text">
+					<img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/jdpower_header.png" height="40" width="276" alt="Highest in Guest Satisfaction among extended stay hotel chains" />
+					<div class="learn_more_cta jdp_learn_more">
+						<a href="http://homewoodsuites.hilton.com/en/hw/promotions/hw_jdpoweraward/index.jhtml" class="imgurl"> <img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/transparent.gif" height="19" width="92" border="0" alt="Learn more >" /> </a>
+					</div>
+				</div>
+				<div class="hws_cta_text">
+					<a href="http://homewoodsuites.hilton.com/en/hw/promotions/hw_atevery/index.jhtml" target="_blank" class="imgurl"> <img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/transparent.gif" height="19" width="251" border="0" alt="Discover the value of Homewood Suites >" /> </a>
+				</div>
+			</div>
+			<div class="disclaimer">
+				<p>
+					Homewood Suites received the highest numerical score among extended stay hotels in the proprietary J.D. Power and Associates 
+					2010-2011 North America Hotel Guest Satisfaction Index StudiesSM. 2011 study based on responses from 61,313 guests measuring 
+					8 upper extended stay hotels and measures opinions of guests who stayed in a hotel May 2010-May 2011. Proprietary study results
+					are based on experiences and perceptions of consumers surveyed June 2010-May 2011. Your experiences may vary. 
+					Visit <a href="http://jdpower.com" target="_blank" style="color: #0294AB;">jdpower.com</a>
+				</p> 
+			</div>
+		</div>
+		<img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/book_now_button.png" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/background.jpg" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/masthead.jpg" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/sign_in_cta.png" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/learn_more_cta.png" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/hws_cta_text.png" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/sign_up_cta.png" height="1" width="1" >
+	</body>
+</html>

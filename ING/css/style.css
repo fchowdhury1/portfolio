@@ -1,0 +1,93 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }
+table, caption, tbody, tfoot, thead, tr, th, td { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; }
+/* 1.2 Default Styles
+------------------------------------------------------------------------------*/ 
+html { overflow-y:scroll; }
+body { background:#fff; color:#333; font-family:Arial, Helvetica, sans-serif; font-size:13px; line-height:1.3846; }
+strong { font-weight:bold; }
+em { font-style:italic; }
+sub { vertical-align:sub; font-size:smaller; }
+sup { vertical-align:super; font-size:smaller; }
+pre, code, kbd, samp { font-family:monospace, sans-serif; }
+pre { padding:1.3846em; white-space:pre; white-space:pre-wrap; white-space:pre-line; }
+a, a:active, a:visited { color:#788CC8; }
+a:hover, a:focus { color:#FF6600; }
+a:link { -webkit-tap-highlight-color:#FF6600; }
+ul, ol { margin:0 0 1.3846em 2em; *margin:0 0 1.3846em 2.769em;
+}
+p { margin-bottom:10px; }
+ol { list-style-type:decimal; }
+dl { margin-bottom:1.3846em; }
+dt { font-weight:bold; }
+table { width:100%; margin:0 0 1.3846em 0; border-collapse:collapse; border-spacing:0; empty-cells:show; }
+table p { margin:0; }
+caption { font-size:1.0769em; /* 14px */ line-height:1.2857em; /* 18px */ }
+caption, th, td { padding:0 5px; text-align:left; }
+tbody th { font-weight:normal; }
+th, td { padding:.16667em 5px; }
+th, td, td img { vertical-align:top; }
+.light th, .light td, th.light, td.light, .odd th, .odd td { background:#eef4fa; }
+.normal th, .normal td, th.normal, td.normal { background:#deeaf6; }
+.medium th, .medium td, th.medium, td.medium { background:#c2dbf8; }
+.dark th, .dark td, th.dark, td.dark { background:#b4c3e1; }
+.border th, .border td, th.border, td.border { padding-bottom:.1111em; border-bottom:1px solid #e5e5e5; }
+tfoot th, tfoot td { padding-top:.1111em; border-top:1px solid #e5e5e5; }
+thead th, thead td, .thead th, .thead td, th.thead, td.thead { background:#788cc7; color:#fff; }
+.important th, .important td, th.important, td.important { font-weight:bold; }
+.empty th, .empty td, th.empty, td.empty { background:transparent; }
+.highlight th, .highlight td, th.highlight, td.highlight { background:transparent; color:#f60; }
+.align-right { text-align:right; }
+.align-left { text-align:left; }
+.align-center { text-align:center; }
+.left { float:left; }
+.right { float:right; }
+img, a img { border:none; }
+blockquote { margin:1.3846em 0; padding-left:1em; border-left:5px solid #e5e5e5; page-break-inside:avoid; font-size:1.2308em; /* 16px */ }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }
+abbr[title], dfn[title] { border-bottom:1px dotted #333; cursor:help; }
+ins { background-color:#ff9; color:#333; text-decoration:none; }
+mark { background-color:#ff9; color:#333; font-style:italic; font-weight:bold; }
+del { text-decoration:line-through; }
+hr { display:block; height:1px; border:0; border-bottom:1px solid #e5e5e5; margin:1.3846em 0 1.3076em 0; padding:0; }
+object, embed { display:block; }
+#container { width: 876px; margin: 0 auto; }
+#header { }
+#header #logo { display:block; border-bottom:5px solid #ff6600; padding:14px 0 0 5px; }
+#header #logo img { margin-bottom:3px; }
+#nav { overflow:hidden;margin:5px 0 0; padding:0; }
+#nav li { float:left; list-style-type:none;  }
+#nav li a { padding:0 10px 0 6px; color:#666; text-decoration:none; font-size:11px;border-right:1px solid #ff6600; }
+#nav li a:hover { text-decoration:underline;}
+.noborder { border:none !important;}
+#container .header { margin-bottom:20px;}
+#container .content {overflow:hidden; padding:50px 15px; width:839px; margin:20px 0 0 6px; overflow:hidden;}
+#container .content h1 { color:#ff6600; font-size:40px; text-transform:uppercase; margin:0; padding:0; line-height:35px;}
+#container .content h2 { color:#003366; font-size:20px; font-weight:normal; margin:0 0 20px; text-align:center;}
+#container .leftcontent { width:335px;}
+#container .leftcontent p { color:#393939;}
+#container .leftcontent a.badgelink  { text-decoration:none; color:#ff6600;}
+#container .leftcontent .badge { background:url(../img/badge.png) no-repeat; text-align:center; width:291px; height:135px; margin-top:40px;}
+#container .leftcontent .badge h1 { color:#003366; font-size:20px; padding-top:5px; text-transform:none; }
+#container .leftcontent .badge h2 { color:#fff; font-size:16px; padding-top:5px; display:block; margin:0; }
+#container .leftcontent .badge p { color:#01468a !important; margin-bottom:5px;}
+#container .leftcontent .badge p span { color:#ff6600;}
+#container .leftcontent .badge .img { margin-top:2px;} 
+#container .leftcontent .bottomcontent { padding:0 20px;}
+#container .rightcontent { width:462px; margin-left:40px;}
+#container .rightcontent h3 { text-align:center; font-weight:normal; font-size:16px; color:#003366;  margin:15px 0;}
+#container .rightcontent h3 span { text-transform:uppercase;  }
+#container .rightcontent ul a { text-decoration:none;}
+#container .rightcontent ul.steps { margin:0; padding:0; list-style:none; }
+#container .rightcontent ul.steps li { background:url(../img/block-bg.png) no-repeat; overflow:hidden; padding:18px 16px 0; width:426px; height:62px; margin:0 auto 15px; }
+#container .rightcontent ul.steps li:hover { background: url(../img/block-bg-hover.png) no-repeat;}
+#container .rightcontent ul.steps li div { overflow:hidden;}
+#container .rightcontent ul.steps li div img { margin-right:25px; width:91px;	}
+#container .rightcontent ul.steps li div div { margin-top:5px; font-size:13px; color:#3366cc; width:300px;}
+#container .rightcontent ul.steps li div.ira { margin-top:-8px;}
+#container .rightcontent ul.steps li div.notstarted div, #container .rightcontent ul li div.ira div  { margin-top:15px;}
+#container .rightcontent .commercial { background:url(../img/com-bg.png) no-repeat; width:395px; margin:25px auto 0; height:91px;}
+#container .rightcontent .commercial h3 { color:#fff; border:none; font-size:12px; text-align:left; margin:0 10px; padding:5px 0 3px; }
+#container .rightcontent .commercial ul { margin:0; padding:0 20px; list-style:none; overflow:hidden;}
+#container .rightcontent .commercial ul li { float:left; padding:5px 25px 0 0; }
+#container .rightcontent .commercial ul li.last { padding-right:0;}

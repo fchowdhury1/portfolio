@@ -1,0 +1,809 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7]>  <html xmlns="http://www.w3.org/1999/xhtml" class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <html xmlns="http://www.w3.org/1999/xhtml" class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <html xmlns="http://www.w3.org/1999/xhtml" class="ie ie8 lte9 lte8">      <![endif]-->
+<!--[if IE 9]>     <html xmlns="http://www.w3.org/1999/xhtml" class="ie ie9 lte9">           <![endif]-->
+<!--[if gt IE 9]>  <html xmlns="http://www.w3.org/1999/xhtml" class="ie">                    <![endif]-->
+<!--[if !IE]><!--> <html xmlns="http://www.w3.org/1999/xhtml">                               <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<link href="assets/css/style.min.css" rel="stylesheet" type="text/css" />
+<div style="position: absolute; right:250px;">
+  <iframe src="/assets/js/calx.htm" style="display:none; width:148px;height:194px;z-index:1000" id="CalFrame" name="CalFrame" marginheight="0" marginwidth="0" noresize="" frameborder="0" scrolling="NO"></iframe>
+</div>
+</head>
+
+<body class="bw">
+<div id="bookingwidget">
+  <div class="book-container">
+    <div class="bookdesc left"> <a href="#" class="bermuda-logo">bermuda logo</a>
+      <p>You are entering the GoToBermuda.com reservation system, powered by Expedia. All reservations made with this reservation system are direct bookings made with Expedia.</p>
+      <div class="expedialogo right"></div></div>
+    <div class="folder-container left">
+      <ul class="tabs">
+        <li class="vacpack"><a href="#tab1" class="vacpack">Vacation Package</a></li>
+        <li class="air"><a href="#tab2" class="air">Air</a></li>
+        <li class="acommodation"><a href="#tab3" class="acommodation">Accomodations</a></li>
+        <li class="cruises"><a href="#tab4" class="cruises">Cruises</a></li>
+      </ul>
+      <div class="tab-container"> 
+        <!-- Vacation packages section -->
+        <div id="tab1" class="tab-content">
+          <div id="searchWiz">
+            <div id="pac"><h2>Search Vacation Packages</h2>
+              <div class="left" style="position:absolute;">
+                <form name="PkgTypeFrm" id="Form1">
+                  <label for="Select6">Package Type</label>
+                  <div style="-moz-border-radius: 3px 3px 3px 3px; background-color:#FFF; border: 2px solid #CCCCCC; color: #777777; outline: 0 none; padding: 0 2px; width: 175px;">Flight and hotel</div>
+                  <!--<select name="PackageType" onchange="SetPkgType(document.PkgTypeFrm.PackageType.value);" class="standard">
+                    <option value="2" selected="selected">Flight and hotel</option>
+                    <option value="1">Flight, hotel and car</option>
+                    <option value="3">Hotel and car</option>
+                    <option value="5">Flight and car</option>
+                  </select>-->
+                  <input name="PrevPkgType" type="hidden" value="2" id="Hidden12"/>
+                </form>
+              </div>
+              <div class="clearfix"></div>
+              <div id="PkgWithFlight" class="left">
+                <form name="PkgFormWithFlight" id="PkgFormWithFlight" action="http://travel.wwte1.com/pubspec/scripts/eap.asp?goto=jump&amp;eapid=18679-30001&amp;jurl=/pubspec/scripts/eap.asp" target="_parent" method="get">
+                  <input name="eapid" type="hidden" value="18679-30001" id="Hidden13"/>
+                  <input name="GOTO" type="hidden" value="PACKAGEWIZ" id="Hidden14"/>
+                  <input type="hidden" name="rfrr" value="" id="Hidden15"/>
+                  <input type="hidden" name="PackageType" value="2" id="Hidden16"/>
+                  <input type="hidden" name="olid" value="" id="Hidden17"/>
+                  <input type="hidden" name="mdpcid" value="18679-30001.0.1" id="Hidden18"/>
+                  <div class="left departfrom">
+                    <label for="Text11">Departing From:</label>
+                    <input type="text" name="FrAirport" value="Enter City / State" onFocus="this.value=''" maxlength="64" class="standard"/>
+                  </div>
+                  <div class="left departret">
+                    <label for="Text12">Depart:</label>
+                    <input type="text" name="FromDate" id="Text12" onclick="javascript:ShowCalendar(document.PkgFormWithFlight.FromDate,document.PkgFormWithFlight.FromDate,null, '','') ; event.cancelBubble=true;" class="date"/>
+                    <select name="FromTime" class="time">
+                      <option value="1">00:00</option>
+                      <option value="60">01:00</option>
+                      <option value="120">02:00</option>
+                      <option value="180">03:00</option>
+                      <option value="240">04:00</option>
+                      <option value="300">05:00</option>
+                      <option value="360">06:00</option>
+                      <option value="420">07:00</option>
+                      <option value="480">08:00</option>
+                      <option value="540">09:00</option>
+                      <option value="600">10:00</option>
+                      <option value="660">11:00</option>
+                      <option value="720">12:00</option>
+                      <option value="780">13:00</option>
+                      <option value="840">14:00</option>
+                      <option value="900">15:00</option>
+                      <option value="960">16:00</option>
+                      <option value="1020">17:00</option>
+                      <option value="1080">18:00</option>
+                      <option value="1140">19:00</option>
+                      <option value="1200">20:00</option>
+                      <option value="1260">21:00</option>
+                      <option value="1320">22:00</option>
+                      <option value="1380">23:00</option>
+                      <option value="362" selected="selected">Anytime</option>
+                      <option value="361">Morning</option>
+                      <option value="901">Midday</option>
+                      <option value="1081">Evening</option>
+                    </select>
+                    <label for="Text13">Return:</label>
+                    <input type="text" name="ToDate" size="10" id="Text13" onclick="javascript:ShowCalendar(document.PkgFormWithFlight.ToDate,document.PkgFormWithFlight.ToDate,document.PkgFormWithFlight.FromDate, '','') ;event.cancelBubble=true;" class="date"/>
+                    <select name="ToTime" class="time">
+                      <option value="1">00:00</option>
+                      <option value="60">01:00</option>
+                      <option value="120">02:00</option>
+                      <option value="180">03:00</option>
+                      <option value="240">04:00</option>
+                      <option value="300">05:00</option>
+                      <option value="360">06:00</option>
+                      <option value="420">07:00</option>
+                      <option value="480">08:00</option>
+                      <option value="540">09:00</option>
+                      <option value="600">10:00</option>
+                      <option value="660">11:00</option>
+                      <option value="720">12:00</option>
+                      <option value="780">13:00</option>
+                      <option value="840">14:00</option>
+                      <option value="900">15:00</option>
+                      <option value="960">16:00</option>
+                      <option value="1020">17:00</option>
+                      <option value="1080">18:00</option>
+                      <option value="1140">19:00</option>
+                      <option value="1200">20:00</option>
+                      <option value="1260">21:00</option>
+                      <option value="1320">22:00</option>
+                      <option value="1380">23:00</option>
+                      <option value="362" selected="selected">Anytime</option>
+                      <option value="361">Morning</option>
+                      <option value="901">Midday</option>
+                      <option value="1081">Evening</option>
+                    </select>
+                  </div>
+                  <div class="left" >
+                    <div style="display:none;">
+                      <label for="DestName">Going to:</label>
+                      <select name="CityID" class="standard">
+                        <option value="601715:BDA">Bermuda</option>
+                      </select>
+                    </div>
+                    <div class="numppl">
+                      <div class="left">
+                        <label for="Select10">Adults</label>
+                        <select name="NumAdult" onchange="SyncVals(this);" id="Select18">
+                          <option value="1">1</option>
+                          <option selected="selected" value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="left">
+                        <label for="Select11">Seniors</label>
+                        <select name="NumSenior" onchange="SyncVals(this);" id="Select19">
+                          <option value="0" selected="selected">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="left">
+                        <label for="">Children</label>
+                        <select name="NumChild" onchange="SyncVals(this);" id="Select20">
+                          <option value="0" selected="selected">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="GoButton right" name="SearchWiz" type="submit" value="" id="Submit4"/>
+                </form>
+              </div>
+              <div id="PkgNoFlight" class="left" style="display:none;">
+                <form name="PkgFormNoFlight" action="http://travel.wwte1.com/pubspec/scripts/eap.asp?goto=jump&amp;eapid=18679-30001&amp;jurl=/pubspec/scripts/eap.asp" target="_parent" method="GET" id="Form3">
+                  <input name="eapid" type="hidden" value="18679-30001" id="Hidden19"/>
+                  <input name="GOTO" type="hidden" value="PACKAGEWIZ" id="Hidden20"/>
+                  <input type="hidden" name="rfrr" value="" id="Hidden21"/>
+                  <input type="hidden" name="PackageType" value="3" id="Hidden22"/>
+                  <input type="hidden" name="olid" value="" id="Hidden23"/>
+                  <input type="hidden" name="mdpcid" value="18679-30001.0.1" id="Hidden24"/>
+                  <div class="left departfrom">
+                    <label for="Select23">Going to:</label>
+                    <input type="text" name="DestName" value="" maxlength="64" class="standard"/>
+                    <!--<label for="Text11">Departing From:</label>
+                    <input type="text" name="FrAirport" value="" maxlength="64" class="standard"/>--> 
+                  </div>
+                  <div class="left departret">
+                    <label for="Text14">Depart:</label>
+                    <input type="text" name="FromDate" id="Text14" onclick="javascript:ShowCalendar(document.PkgFormNoFlight.FromDate,document.PkgFormNoFlight.FromDate,null, '','') ; event.cancelBubble=true;" class="date"/>
+                    <select name="FromTime" class="time">
+                      <option value="1">00:00</option>
+                      <option value="60">01:00</option>
+                      <option value="120">02:00</option>
+                      <option value="180">03:00</option>
+                      <option value="240">04:00</option>
+                      <option value="300">05:00</option>
+                      <option value="360">06:00</option>
+                      <option value="420">07:00</option>
+                      <option value="480">08:00</option>
+                      <option value="540">09:00</option>
+                      <option value="600">10:00</option>
+                      <option value="660">11:00</option>
+                      <option value="720">12:00</option>
+                      <option value="780">13:00</option>
+                      <option value="840">14:00</option>
+                      <option value="900">15:00</option>
+                      <option value="960">16:00</option>
+                      <option value="1020">17:00</option>
+                      <option value="1080">18:00</option>
+                      <option value="1140">19:00</option>
+                      <option value="1200">20:00</option>
+                      <option value="1260">21:00</option>
+                      <option value="1320">22:00</option>
+                      <option value="1380">23:00</option>
+                      <option value="362" selected="selected">Anytime</option>
+                      <option value="361">Morning</option>
+                      <option value="901">Midday</option>
+                      <option value="1081">Evening</option>
+                    </select>
+                    <label for="Text15">Return:</label>
+                    <input type="text" name="ToDate" id="Text15" onclick="javascript:ShowCalendar(document.PkgFormNoFlight.ToDate,document.PkgFormNoFlight.ToDate,document.PkgFormNoFlight.FromDate, '','') ; event.cancelBubble=true;" class="date">
+                    <select name="ToTime" class="time">
+                      <option value="1">00:00</option>
+                      <option value="60">01:00</option>
+                      <option value="120">02:00</option>
+                      <option value="180">03:00</option>
+                      <option value="240">04:00</option>
+                      <option value="300">05:00</option>
+                      <option value="360">06:00</option>
+                      <option value="420">07:00</option>
+                      <option value="480">08:00</option>
+                      <option value="540">09:00</option>
+                      <option value="600">10:00</option>
+                      <option value="660">11:00</option>
+                      <option value="720">12:00</option>
+                      <option value="780">13:00</option>
+                      <option value="840">14:00</option>
+                      <option value="900">15:00</option>
+                      <option value="960">16:00</option>
+                      <option value="1020">17:00</option>
+                      <option value="1080">18:00</option>
+                      <option value="1140">19:00</option>
+                      <option value="1200">20:00</option>
+                      <option value="1260">21:00</option>
+                      <option value="1320">22:00</option>
+                      <option value="1380">23:00</option>
+                      <option value="362" selected="selected">Anytime</option>
+                      <option value="361">Morning</option>
+                      <option value="901">Midday</option>
+                      <option value="1081">Evening</option>
+                    </select>
+                  </div>
+                  <div class="left" >
+                    <div style="display:none;">
+                      <label for="Select23">Going to:</label>
+                      <input type="text" name="DestName" value="Bermuda" maxlength="64" class="standard"/>
+                    </div>
+                    <div class="numppl">
+                      <div class="left">
+                        <label for="Select10">Adults</label>
+                        <select name="NumAdult" onchange="SyncVals(this);" id="Select9">
+                          <option value="1">1</option>
+                          <option selected="selected" value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="left">
+                        <label for="Select11">Seniors</label>
+                        <select name="NumSenior" onchange="SyncVals(this);" id="Select13">
+                          <option value="0" selected="selected">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="left">
+                        <label for="">Children</label>
+                        <select name="NumChild" onchange="SyncVals(this);" id="Select14">
+                          <option value="0" selected="selected">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="GoButton right" name="SearchWiz" type="submit" value="" id="Submit5"/>
+                </form>
+              </div>
+              <div id="PkgWithFlightCar" style="display:none;">
+                <form name="PkgFormWithFlightCar" action="http://travel.wwte1.com/pubspec/scripts/eap.asp?goto=jump&amp;eapid=18679-30001&amp;jurl=/pubspec/scripts/eap.asp" target="_parent" method="GET" id="Form4">
+                  <input name="eapid" type="hidden" value="18679-30001" id="Hidden25"/>
+                  <input name="GOTO" type="hidden" value="PACKAGEWIZ" id="Hidden26"/>
+                  <input type="hidden" name="rfrr" value="" id="Hidden27"/>
+                  <input type="hidden" name="PackageType" value="5" id="Hidden28"/>
+                  <input type="hidden" name="olid" value="" id="Hidden29"/>
+                  <input type="hidden" name="mdpcid" value="18679-30001.0.1" id="Hidden30"/>
+                  <div class="left departfrom">
+                    <label for="Text16">Departing From</label>
+                    <input type="text" name="FrAirport" value="Enter City / State" onFocus="this.value=''" maxlength="64" class="standard"/>
+                  </div>
+                  <div class="left departret">
+                    <label for="Text17">Depart:</label>
+                    <input type="text" name="FromDate" id="Text17" onclick="javascript:ShowCalendar(document.PkgFormWithFlightCar.FromDate,document.PkgFormWithFlightCar.FromDate,null, '','') ; event.cancelBubble=true;" class="date"/>
+                    <select name="FromTime" class="time">
+                      <option value="1">00:00</option>
+                      <option value="60">01:00</option>
+                      <option value="120">02:00</option>
+                      <option value="180">03:00</option>
+                      <option value="240">04:00</option>
+                      <option value="300">05:00</option>
+                      <option value="360">06:00</option>
+                      <option value="420">07:00</option>
+                      <option value="480">08:00</option>
+                      <option value="540">09:00</option>
+                      <option value="600">10:00</option>
+                      <option value="660">11:00</option>
+                      <option value="720">12:00</option>
+                      <option value="780">13:00</option>
+                      <option value="840">14:00</option>
+                      <option value="900">15:00</option>
+                      <option value="960">16:00</option>
+                      <option value="1020">17:00</option>
+                      <option value="1080">18:00</option>
+                      <option value="1140">19:00</option>
+                      <option value="1200">20:00</option>
+                      <option value="1260">21:00</option>
+                      <option value="1320">22:00</option>
+                      <option value="1380">23:00</option>
+                      <option value="362" selected="selected">Anytime</option>
+                      <option value="361">Morning</option>
+                      <option value="901">Midday</option>
+                      <option value="1081">Evening</option>
+                    </select>
+                    <label for="Text18">Return:</label>
+                    <input type="text" name="ToDate" size="10" id="Text18" onclick="javascript:ShowCalendar(document.PkgFormWithFlightCar.ToDate,document.PkgFormWithFlightCar.ToDate,document.PkgFormWithFlightCar.FromDate, '','') ; event.cancelBubble=true;" class="date"/>
+                    <select name="ToTime" class="time">
+                      <option value="1">00:00</option>
+                      <option value="60">01:00</option>
+                      <option value="120">02:00</option>
+                      <option value="180">03:00</option>
+                      <option value="240">04:00</option>
+                      <option value="300">05:00</option>
+                      <option value="360">06:00</option>
+                      <option value="420">07:00</option>
+                      <option value="480">08:00</option>
+                      <option value="540">09:00</option>
+                      <option value="600">10:00</option>
+                      <option value="660">11:00</option>
+                      <option value="720">12:00</option>
+                      <option value="780">13:00</option>
+                      <option value="840">14:00</option>
+                      <option value="900">15:00</option>
+                      <option value="960">16:00</option>
+                      <option value="1020">17:00</option>
+                      <option value="1080">18:00</option>
+                      <option value="1140">19:00</option>
+                      <option value="1200">20:00</option>
+                      <option value="1260">21:00</option>
+                      <option value="1320">22:00</option>
+                      <option value="1380">23:00</option>
+                      <option value="362" selected="selected">Anytime</option>
+                      <option value="361">Morning</option>
+                      <option value="901">Midday</option>
+                      <option value="1081">Evening</option>
+                    </select>
+                  </div>
+                  <div class="left" >
+                    <div style="display:none;">
+                      <label for="Select30">Going to:</label>
+                      <select name="CityID" class="standard">
+                        <option value="601715:BDA">Bermuda</option>
+                      </select>
+                    </div>
+                    <div class="numppl">
+                      <div class="left">
+                        <label for="Select10">Adults</label>
+                        <select name="NumAdult" onchange="SyncVals(this);" id="Select6">
+                          <option value="1">1</option>
+                          <option selected="selected" value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="left">
+                        <label for="Select11">Seniors</label>
+                        <select name="NumSenior" onchange="SyncVals(this);" id="Select7">
+                          <option value="0" selected="selected">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="left">
+                        <label for="">Children</label>
+                        <select name="NumChild" onchange="SyncVals(this);" id="Select8">
+                          <option value="0" selected="selected">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="GoButton right" name="SearchWiz" type="submit" value="" id="Submit6"/>
+                </form>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Air section -->
+        <div id="tab2" class="tab-content hidden">
+          <div id="searchWiz">
+            <div id="flt" style="display: block;"><h2>Search Air</h2>
+              <form action="http://travel.wwte1.com/pubspec/scripts/eap.asp" target="_parent" method="get" name="FltForm" id="FltForm">
+                <input name="eapid" type="hidden" value="18679-30001" id="Hidden6"/>
+                <input type="hidden" name="GOTO" value="EXPFLTWIZ" id="Hidden7"/>
+                <input type="hidden" name="NumInfant" value="0" id="Hidden8"/>
+                <input type="hidden" name="InfantInSeat" value="1" id="Hidden9"/>
+                <input type="hidden" name="rfrr" value="" id="Hidden1"/>
+                <input type="hidden" name="lang" value="1033" id="Hidden10"/>
+                <div style="width:210px;" class="left">
+                  <label>What type of flight do you need?</label>
+                  <div class="left typeflight">
+                    <input class="noborder radiobutton left" type="radio" name="TripType" value="ROUNDTRIP" checked="checked" onclick="switchFlightMode('return');">
+                    <label class="left">Return </label>
+                    <input class="noborder radiobutton left" type="radio" name="TripType" value="ONEWAY" onclick="switchFlightMode('oneway');"/>
+                    <label class="left">Single</label>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div>
+                    <label for="Text4">Departing From:</label>
+                    <input type="text" name="FrAirport" maxlength="64" onblur="SyncVals(this);" value="Enter City / State" onFocus="this.value=''" class="standard"/>
+                  </div>
+                </div>
+                <div class="left departret">
+                  <label for="Text5">Depart:</label>
+                  <input type="text" class="date" name="FromDate" onblur="SyncVals(this);" id="Text5" onclick="javascript:ShowCalendar(document.FltForm.FromDate,document.FltForm.FromDate,null, '','') ; event.cancelBubble=true;"/>
+                  <select class="time" name="FromTime" onchange="SyncVals(this);">
+                    <option value="1">00:00</option>
+                    <option value="60">01:00</option>
+                    <option value="120">02:00</option>
+                    <option value="180">03:00</option>
+                    <option value="240">04:00</option>
+                    <option value="300">05:00</option>
+                    <option value="360">06:00</option>
+                    <option value="420">07:00</option>
+                    <option value="480">08:00</option>
+                    <option value="540">09:00</option>
+                    <option value="600">10:00</option>
+                    <option value="660">11:00</option>
+                    <option value="720">12:00</option>
+                    <option value="780">13:00</option>
+                    <option value="840">14:00</option>
+                    <option value="900">15:00</option>
+                    <option value="960">16:00</option>
+                    <option value="1020">17:00</option>
+                    <option value="1080">18:00</option>
+                    <option value="1140">19:00</option>
+                    <option value="1200">20:00</option>
+                    <option value="1260">21:00</option>
+                    <option value="1320">22:00</option>
+                    <option value="1380">23:00</option>
+                    <option value="362" selected="selected">Anytime</option>
+                    <option value="361">Morning</option>
+                    <option value="721">Midday</option>
+                    <option value="1081">Evening</option>
+                  </select>
+                  <label for="Text7">Return:</label>
+                  <input type="text" class="date" name="ToDate" onblur="SyncVals(this);" id="Text7" onclick="javascript:ShowCalendar(document.FltForm.ToDate,document.FltForm.ToDate,document.FltForm.FromDate, '','') ; event.cancelBubble=true;"/>
+                  <select class="time" name="ToTime" onchange="SyncVals(this);">
+                    <option value="1">00:00</option>
+                    <option value="60">01:00</option>
+                    <option value="120">02:00</option>
+                    <option value="180">03:00</option>
+                    <option value="240">04:00</option>
+                    <option value="300">05:00</option>
+                    <option value="360">06:00</option>
+                    <option value="420">07:00</option>
+                    <option value="480">08:00</option>
+                    <option value="540">09:00</option>
+                    <option value="600">10:00</option>
+                    <option value="660">11:00</option>
+                    <option value="720">12:00</option>
+                    <option value="780">13:00</option>
+                    <option value="840">14:00</option>
+                    <option value="900">15:00</option>
+                    <option value="960">16:00</option>
+                    <option value="1020">17:00</option>
+                    <option value="1080">18:00</option>
+                    <option value="1140">19:00</option>
+                    <option value="1200">20:00</option>
+                    <option value="1260">21:00</option>
+                    <option value="1320">22:00</option>
+                    <option value="1380">23:00</option>
+                    <option value="362" selected="selected">Anytime</option>
+                    <option value="361">Morning</option>
+                    <option value="721">Midday</option>
+                    <option value="1081">Evening</option>
+                  </select>
+                </div>
+                <div style="display:none;">
+                  <label for="Text6">Going to:</label>
+                  <input type="text" name="ToAirport" value="bermuda" size="22" onblur="SyncVals(this);" class="standard">
+                </div>
+                <div class="numppl">
+                  <div class="left">
+                    <label for="Select10">Adults</label>
+                    <select name="NumAdult" onchange="SyncVals(this);" id="Select10">
+                      <option value="1">1</option>
+                      <option selected="selected" value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                  <div class="left">
+                    <label for="Select11">Seniors</label>
+                    <select name="NumSenior" onchange="SyncVals(this);" id="Select11">
+                      <option value="0" selected="selected">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                  <div class="left">
+                    <label for="">Children</label>
+                    <select name="NumChild" onchange="SyncVals(this);" id="Select12">
+                      <option value="0" selected="selected">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                    </select>
+                  </div>
+                </div>
+                <input class="GoButton" name="SearchWiz" type="submit" value="" id="Submit1"/>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Accommodation section -->
+        <div id="tab3" class="tab-content hidden">
+          <div id="searchWiz">
+            <div id="hot" style="display: block;"><h2>Search Accomodations</h2>
+              <form action="http://travel.wwte1.com/pubspec/scripts/eap.asp" target="_parent" method="get" name="HotForm" id="HotForm">
+                <input name="eapid" type="hidden" value="18679-30001" id="Hidden2"/>
+                <input type="hidden" name="GOTO" value="HOTSEARCH" id="Hidden3"/>
+                <input type="hidden" name="rfrr" value="" id="Hidden4"/>
+                <input type="hidden" name="lang" value="1033" id="Hidden5"/>
+                <div class="left">
+                  <label for="Select1" class="left numofrooms">Number of Rooms:</label>
+                  <select name="NumRoom" onchange="mrd(document.HotForm.NumRoom.value)" id="Select1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <div class="clearfix"></div>
+                  <div style="display:none;">
+                    <label for="Text1">Search for hotels in:</label>
+                    <input name="CityName" onchange="SyncVals(this);" class="standard" value="Bermuda"/>
+                  </div>
+                  <div class="left mid">
+                    <label for="Text2">Check-in date:</label>
+                    <input class="date left" type="text" name="InDate" onblur="SyncVals(this);" id="Text2" onclick="javascript:ShowCalendar(document.HotForm.InDate,document.HotForm.InDate,null,'','') ; event.cancelBubble=true;" />
+                    <a href="#" onclick="javascript:ShowCalendar(document.HotForm.InDate,document.HotForm.InDate,null,'','') ; event.cancelBubble=true;"  class="btn-calendar">calender</a> </div>
+                  <div class="left mid">
+                    <label for="Text3">Check-out date:</label>
+                    <input class="left date" type="text" name="OutDate" onblur="SyncVals(this);" id="Text3" onclick="javascript:ShowCalendar(document.HotForm.OutDate,document.HotForm.OutDate,document.HotForm.InDate,'','') ; event.cancelBubble=true;" />
+                    <a href="#" onclick="javascript:ShowCalendar(document.HotForm.OutDate,document.HotForm.OutDate,document.HotForm.InDate,'','') ; event.cancelBubble=true;" class="btn-calendar">calender</a> </div>
+                </div>
+                <div class="numppl left">
+                  <!--<div class="left">-->
+                    <div class="labels">
+                      <label for="Select2">Adults</label>
+                      <label for="Select3">Children</label>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div id="hotrm1">
+                      <div class="roomTitle left">Room 1</div>
+                      <div class="left">
+                        <select name="NumAdult" onchange="SyncVals(this);" id="Select16">
+                          <option value="1">1</option>
+                          <option selected="selected" value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="left">
+                        <select name="NumChild" onchange="SyncVals(this);" id="Select3">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div id="hotrm2" style="display:none;">
+                      <div class="roomTitle left">Room 2</div>
+                      <div class="left"> 
+                        <!-- <label for="Select4">Adults</label>-->
+                        <select name="NumAdult2" id="Select4">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="left"> 
+                        <!--<label for="Select5">Children</label>-->
+                        <select name="NumChild2" id="Select5">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div id="hotrm3" style="display:none;">
+                      <div class="roomTitle left">Room 3</div>
+                      <div class="left"> 
+                        <!--<label for="Select6">Adults:</label>-->
+                        <select name="NumAdult3" id="Select2">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="left"> 
+                        <!--<label for="Select7">Children:</label>-->
+                        <select name="NumChild3" id="Select17">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  <!--</div>-->
+                  <input class="GoButton" name="SearchWiz" type="submit" value="" id="Submit8"/>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <!-- Cruises section -->
+        <div id="tab4" class="tab-content hidden"> 
+          <!-- cruises tab --> 
+          <div id="searchWiz">
+            <div class="tab-cruises-content" id="tsh"><h2>Search Cruises</h2>
+              <p>To find great cruise deals and book your dream cruise to Bermuda, please <a href="http://cruise.expedia.com/Search.aspx?ds=Bermuda&rfrr=CRZ.LP.Nav.SrchWzd&tpid=1&eapid=18679" target="_blank">go directly to our reservations partner's Cruises booking page</a> and take advantage of their Best Price Guarantee.</p>
+              <a href="http://cruise.expedia.com/Search.aspx?ds=Bermuda&rfrr=CRZ.LP.Nav.SrchWzd&tpid=1&eapid=18679" class="GoCruiseBtn" target="_blank">Search for Cruises Now</a>
+            </div>
+          </div>
+          <!-- end of cruises tab -->
+          <div class="clearfix"></div>
+        </div>
+        
+        <!-- Car section -->
+        <div id="car" style="display: none; padding:5px 20px;">
+          <form action="http://travel.wwte1.com/pubspec/scripts/eap.asp" method="get" name="CarForm" id="CarForm">
+            <input name="eapid" type="hidden" value="18679-30001" id="Hidden11"/>
+            <input type="hidden" name="GOTO" value="CARSEARCH" id="Hidden31"/>
+            <input type="hidden" name="rfrr" value="" id="Hidden36"/>
+            <input type="hidden" name="lang" value="1033" id="Hidden32"/>
+            <table id="Table10">
+              <tbody>
+                <tr>
+                  <td><label for="Text8">Pickup location:</label>
+                    <br/>
+                    <input maxlength="100" name="PickUpLoc" onblur="SyncVals(this);" class="standard"></td>
+                </tr>
+                <tr>
+                  <td><label for="Text9">Pick-up:</label>
+                    <br>
+                    <input class="date" type="text" name="FromDate" onblur="SyncVals(this);" id="Text9" onclick="javascript:ShowCalendar(document.CarForm.FromDate,document.CarForm.FromDate,null, '','') ; event.cancelBubble=true;"/>
+                    <select class="time" name="PickUpTime" onchange="SyncVals(this);">
+                      <option value="1">0:00</option>
+                      <option value="60">1:00</option>
+                      <option value="120">2:00</option>
+                      <option value="180">3:00</option>
+                      <option value="240">4:00</option>
+                      <option value="300">5:00</option>
+                      <option value="360">6:00</option>
+                      <option value="420">7:00</option>
+                      <option value="480">8:00</option>
+                      <option value="540">9:00</option>
+                      <option value="600">10:00</option>
+                      <option selected="selected" value="660">11:00</option>
+                      <option value="720">12:00</option>
+                      <option value="780">13:00</option>
+                      <option value="840">14:00</option>
+                      <option value="900">15:00</option>
+                      <option value="960">16:00</option>
+                      <option value="1020">17:00</option>
+                      <option value="1080">18:00</option>
+                      <option value="1140">19:00</option>
+                      <option value="1200">20:00</option>
+                      <option value="1260">21:00</option>
+                      <option value="1320">22:00</option>
+                      <option value="1380">23:00</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td><label for="Text10">Drop-off:</label>
+                    <br/>
+                    <input class="date" type="text" name="ToDate" onblur="SyncVals(this);" id="Text10" onclick="javascript:ShowCalendar(document.CarForm.ToDate,document.CarForm.ToDate,null, '','') ; event.cancelBubble=true;"/>
+                    <select class="time" name="DropTime" onchange="SyncVals(this);">
+                      <option value="1">0:00</option>
+                      <option value="60">1:00</option>
+                      <option value="120">2:00</option>
+                      <option value="180">3:00</option>
+                      <option value="240">4:00</option>
+                      <option value="300">5:00</option>
+                      <option value="360">6:00</option>
+                      <option value="420">7:00</option>
+                      <option value="480">8:00</option>
+                      <option value="540">9:00</option>
+                      <option value="600">10:00</option>
+                      <option selected="selected" value="660">11:00</option>
+                      <option value="720">12:00</option>
+                      <option value="780">13:00</option>
+                      <option value="840">14:00</option>
+                      <option value="900">15:00</option>
+                      <option value="960">16:00</option>
+                      <option value="1020">17:00</option>
+                      <option value="1080">18:00</option>
+                      <option value="1140">19:00</option>
+                      <option value="1200">20:00</option>
+                      <option value="1260">21:00</option>
+                      <option value="1320">22:00</option>
+                      <option value="1380">23:00</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><label for="Select15">Car class</label>
+                    <br/>
+                    <select name="Class" id="Select15" class="standard">
+                      <option selected="selected" value="NoPreference">No preference</option>
+                      <option value="Economy">Economy</option>
+                      <option value="Compact">Compact</option>
+                      <option value="Midsize">Midsize</option>
+                      <option value="Standard">Standard</option>
+                      <option value="FullSize">Full Size</option>
+                      <option value="Premium">Premium</option>
+                      <option value="Luxury">Luxury</option>
+                      <option value="Convertible">Convertible</option>
+                      <option value="Minivan">Minivan</option>
+                      <option value="SUV">Sport Utility Vehicle</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td style="padding:10px 0;"><input class="GoButton" name="SearchWiz" type="submit" value="" id="Submit2"/></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+        <!-- tshops section -->
+        <div id="tsh" style="display: none; padding:5px 20px;">
+          <form action="http://travel.wwte1.com/pubspec/scripts/eap.asp" method="get" name="TshopsForm" id="Form2">
+            <input name="eapid" type="hidden" value="18679-30001" id="Hidden33"/>
+            <input type="hidden" name="GOTO" value="TSHOPSSEARCH" id="Hidden34"/>
+            <input type="hidden" name="rfrr" value="" id="Hidden37"/>
+            <input type="hidden" name="lang" value="1033" id="Hidden35"/>
+            <table id="Table11">
+              <tbody>
+                <tr>
+                  <td><label for="Text8">Search for activities in:</label>
+                    <br/>
+                    <input maxlength="100" name="locationName" onblur="SyncVals(this);" class="standard" value="Bermuda"/></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><label for="Text5">Depart:</label>
+                    <br>
+                    <input type="text" class="date" name="StartDate" onblur="SyncVals(this);" id="Text20" onclick="javascript:ShowCalendar(document.TshopsForm.StartDate,document.TshopsForm.StartDate,null, '','') ; event.cancelBubble=true;"/></td>
+                </tr>
+                <tr>
+                  <td><label for="Text10">Return:</label>
+                    <br>
+                    <input class="date" type="text" name="EndDate" onblur="SyncVals(this);" id="Text21" onclick="javascript:ShowCalendar(document.TshopsForm.EndDate,document.TshopsForm.EndDate,null, '','') ; event.cancelBubble=true;"/></td>
+                </tr>
+                <tr>
+                  <td style="padding:10px 0;"><input class="GoButton" name="SearchWiz" type="submit" value="" id="Submit3"/></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/script.min.js"></script> 
+<script type="text/javascript">init();</script>
+</body>
+</html>

@@ -1,0 +1,950 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--ls:begin[body]-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Hilton Garden Inn Hotels | Learn About Our Hotels, Brand &amp; Services</title>
+<meta name="keywords" content="about hilton garden inn,about hgi,hgi hotel information,hilton garden inn hotel information"/>
+<meta name="description" content="At Hilton Garden Inn, we provide award winning services &amp; exceptional value for business &amp; leisure travelers alike. Everything. Right where you need it.&reg;"/>
+<meta name="name" content="value"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="icon" href="../../skins/common/img/favicon_GI.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="../../skins/common/img/favicon_GI.ico" type="image/x-icon" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<link rel="stylesheet" type="text/css" href="http://fast.fonts.com/cssapi/3a2dcd9c-f35a-4a1d-b565-0ef68536d578.css" />
+<link rel="stylesheet" type="text/css" href="../../skins/common/common.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="../../skins/common/light_brand/global_xa.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="../../skins/common/sayt.min.css" media="screen, projection"/>
+<link rel="stylesheet" type="text/css" href="../../skins/en_US/GI/search_widget.css" media="screen, projection" />
+<link rel="stylesheet" type="text/css" href="../../skins/en_US/GI/styles.css" media="screen, projection, print" />
+<link rel="stylesheet" type="text/css" href="../../skins/common/print.css" media="print" />
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="../../skins/en_US/GI/ie.css" media="screen, projection" /><![endif]-->
+
+<script type="text/javascript"> 
+	window.jsLoader = window.jsLoader || [];
+</script>
+<script type="text/javascript">
+//<![CDATA[
+// Set current source market, locale, and brand
+	var SOURCEMARKET = { 'name' : 'US', 'domain' : '.com',
+			'adhocCountryCode' : 'US', 'searchRadius' : 40,
+			'distanceUnit' : 'MILES', 'international' : false };
+	var LOCALE = 'en_US';
+	var BRAND = { 'name' : 'GARDEN_INN', 'id' : 'GI', 'lowerCaseId' : 'gi' };
+	// Set DEBUG to true to enabled javascript logging.
+	var DEBUG = false;
+//]]>
+</script>
+<script type="text/javascript" src="http://api.roomkey.com/js/connector/connector.js"></script>
+<script type="text/javascript" src="../../skins/common/js_comp/tracking.comp.min.js"></script>
+</head>
+<body class="brandPage jsDisabled">
+<script type="text/javascript">
+//<![CDATA[
+var bodyTag = document.getElementsByTagName('body');
+	bodyTag[0].className = bodyTag[0].className.split('jsDisabled').join(' jsEnabled ');
+//]]>
+</script>
+<ul class="skiplist">
+  <li class="skip"> <a href="#content" tabindex="1">Skip to Content</a> </li>
+</ul>
+
+<!-- check if it is an Hhonors Page -->
+
+<div id="global_header_wrapper" class="ac">
+  <div class="header_row">
+    <div id="global_header" class="logged_out header_content_container">
+      <ul id="utility_links_list">
+        <li class="logged_in_view"><a href="https://secure3.hilton.com/en/hh/customer/account/reservations.htm" tabindex="1" id="my_reservations_in">My Reservations</a></li>
+        <li class="logged_out_view"><a href="https://secure3.hilton.com/en_US/gi/reservation/find/index.htm" tabindex="1" id="my_reservations" class="jsAction">My Reservations</a></li>
+        <li id="sign_up_for_promotions"><a href="https://secure3.hilton.com/en/hh/customer/account/myOffers.htm" tabindex="2">View Promotions</a></li>
+      </ul>
+      <div id="dock_right_items_container">
+        <div id="user_nav">
+          <div class="logged_out_view"> <a href="https://secure3.hilton.com/en/gi/customer/login/index.htm" tabindex="20" id="sign_in" class="jsAction">Sign In</a> <a href="https://secure3.hilton.com/en/hh/customer/join/joinHHonors.htm" tabindex="30" id="explore_benefits">Join</a> </div>
+          <div class="logged_in_view"> <span id="welcome">&nbsp;</span> <span class="point_status"><span class="points">&nbsp;</span> <span class="points_title">&nbsp;</span> / <span class="member_level">&nbsp;</span></span> <a href="https://secure3.hilton.com/en/hh/customer/account/index.htm" tabindex="40" id="my_account">My Account</a> <a href="https://secure3.hilton.com/en/gi/customer/login/logout.htm?forwardPageURI=%2Fen%2Fabout%2Findex.html" tabindex="41" id="sign_out">Sign Out</a> </div>
+        </div>
+        <a href="http://hhonors3.hilton.com/en/index.html" tabindex="42" id="hhonors_logo_link"><img src="../../skins/common/light_brand/img/logo_brand_dock_HH.png" alt="Hilton HHonors" id="hhonors_dock_logo" height="29" width="104" id="hhonors_dock_logo"/></a> <a href="https://secure3.hilton.com/en/gi/customer/login/index.htm" tabindex="43" id="dock_control" class="jsAction" title="Show Sign In Form">&nbsp;</a> </div>
+    </div>
+  </div>
+  <div class="header_row" id="expanded_area"> <span id="loader_container"> <span class="spinner">&nbsp;</span> </span> 
+    <!--  Login View -->
+    <div id="login_view" class="header_content_container ac">
+      <div id="login_form" class="ac">
+        <form id="frmSignin" name="frmSignin" action="https://secure3.hilton.com/en/gi/customer/login/index.htm" method="post" onsubmit="return validateLoginForm(this, 'dock_UsernameHHonors', 'dock_Password');">
+          <label class="usernameHHonorsLabel" for="dock_UsernameHHonors">Username or HHonors #</label>
+          <span class="text_input_bg">
+          <input id="dock_UsernameHHonors" name="username" class="frmTextSignin" tabindex="21" type="text" value="" maxlength="32"/>
+          </span>
+          <label class="passwordLabel" for="dock_Password">Password or PIN</label>
+          <span class="text_input_bg">
+          <input id="dock_Password" name="password" class="frmTextSignin" tabindex="22" type="password" value="" maxlength="20"/>
+          </span> <a href="#" tabindex="25" id="login_go" class="custom_button" role="button" onclick="javascript:jQuery('#frmSignin').submit();"><span class="text">Sign In</span><span class="arrow_icon">&nbsp;</span></a>
+          <input id="chkRemember" name="rememberMe" tabindex="23" type="checkbox" value="true"/>
+          <input type="hidden" name="_rememberMe" value="on"/>
+          <label id="remember_label" for="chkRemember">Remember Me</label>
+          <a href="https://secure3.hilton.com/en/gi/customer/login/forgotPassword.htm?forwardPageURI=%2Fen%2Fabout%2Findex.html" tabindex="24" id="forgot_password">Forgot Password?</a>
+          <input type="submit" class="hidden" name="" value="Sign In" />
+          <input id="forwardLoginURI" name="forwardPageURI" type="hidden" value="/en/about/index.html"/>
+          <input id="loginPageTitleLoginForm" name="loginPageTitle" type="hidden" value=""/>
+          <button>Sign In</button>
+        </form>
+      </div>
+    </div>
+    <!--  End Login View --> 
+    <!--  Res Panel View -->
+    <div id="my_reservation_panel" class="header_content_container ac">
+      <div id="my_res_login_form"> <span class="column_header">Sign in to view all reservations in your account:</span>
+        <form id="formSignIn" name="formSignIn" action="https://secure3.hilton.com/en/gi/customer/login/index.htm" method="post">
+          <div class="ac">
+            <label class="usernameHHonorsLabel" for="dock_username">Username or HHonors #</label>
+            <span class="text_input_bg">
+            <input id="dock_username" name="username" class="text" tabindex="2" type="text" value="" maxlength="32"/>
+            </span> </div>
+          <div class="ac">
+            <label class="passwordLabel" for="dock_password_form2">Password or PIN</label>
+            <span class="text_input_bg">
+            <input id="dock_password_form2" name="password" class="text" tabindex="3" type="password" value="" maxlength="20"/>
+            </span> <a href="#" tabindex="4" id="sign_in_res" class="custom_button" role="button" onclick="javascript:jQuery('#formSignIn').submit();"><span class="text">Sign In</span><span class="arrow_icon">&nbsp;</span></a>
+            <input type="submit" class="hidden" name="" value="Sign In" />
+          </div>
+          <input id="forwardMyResURI" name="forwardPageURI" type="hidden" value="https://secure3.hilton.com/en/hh/customer/account/reservations.htm"/>
+          <input id="loginPageTitleResForm" name="loginPageTitle" type="hidden" value=""/>
+          <button>Sign In</button>
+        </form>
+      </div>
+      <div id="view_res_form"> <span class="column_header">View/change a specific reservation:</span>
+        <form id="findReservationForm" action="https://secure3.hilton.com/en_US/gi/reservation/find/index.htm" method="post">
+          <div class="ac">
+            <label class="confirmationNumber" for="confirmationNumber">Your Confirmation #</label>
+            <span class="text_input_bg">
+            <input id="confirmationNumber" name="confirmationNumber" class="text" tabindex="5" type="text" value="" maxlength="10"/>
+            </span> </div>
+          <div class="ac">
+            <label class="lastNameLabel" for="lastName">Last Name</label>
+            <span class="text_input_bg">
+            <input id="lastName" name="lastNameOrCCLastFourDigits" class="text" tabindex="6" type="text" value="" maxlength="32"/>
+            </span> <a href="#" tabindex="7" id="find" class="custom_button" role="button" onclick="javascript:jQuery('#findReservationForm').submit();"><span class="text">Find</span><span class="arrow_icon">&nbsp;</span></a>
+            <input type="submit" class="hidden" name="" value="Sign In" />
+          </div>
+          <button>Find</button>
+        </form>
+      </div>
+      <div id="existing_travel_links_container"> <span class="column_header">Existing Travel Reservations:</span>
+        <ul>
+          <li><a href="http://hiltonplus.flexrez.com/wcsmain.asp?plf=hlgd" tabindex="8">Hotel + Air + Car reservation</a></li>
+          <li><a href="http://hilton.flexrez.com/travel/airlines/lang/en-us/status/default.asp?refid=PAHILTGARDEN&plf=hlgd" tabindex="9">Air itinerary</a></li>
+          <li><a href="http://secure.rezserver.com/car/help/review/?refid=2690" tabindex="10">Car rental details</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--  End Res Panel View --> 
+    <!--  Begin Account View -->
+    <div id="account_view" class="header_content_container ac">
+      <div id="next_stay" class="account_container"> <span class="column_header">Your Next Stay:</span> <a href="https://secure3.hilton.com/en/hh/customer/account/reservations.htm" tabindex="23" class="see_all">See all</a><br/>
+        <div class="stay_details"> <span class="date">&nbsp;</span> <span class="hotel_name">&nbsp;</span>
+          <ul class="manage_link_list ac">
+            <li><a href="#" tabindex="24" class="view_edit">View/Edit</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="last_stay" class="account_container"> <span class="column_header">Your Last Stay:</span> <a href="https://secure3.hilton.com/en/hh/customer/account/pastStays.htm" tabindex="30" class="see_all">See all</a><br/>
+        <div class="stay_details"> <span class="date">&nbsp;</span> <span class="hotel_name">&nbsp;</span>
+          <ul class="manage_link_list ac">
+            <li><a href="#" tabindex="31" class="view_receipt">View Receipt</a></li>
+            <li class="last"><a href="#" tabindex="32" class="book_again">Book Again</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- join container start -->
+      <div id="join_hhonors_container" class="account_container"> <span class="hhonors_copy"><strong>Join Hilton HHonors&#8482;</strong> Upgrade your account and earn points at over 3,600 hotels in 82 countries around the world.</span> <a href="https://secure3.hilton.com/en/hh/customer/join/joinHHonors.htm" tabindex="33" id="join_hhonors_button" class="custom_button"><span class="text">Join HHonors</span><span class="arrow_icon">&nbsp;</span></a> </div>
+      <!-- end join container --> 
+      <!-- Member status start -->
+      <div id="my_account_progress">
+        <div class="progress_bar_nav">
+          <p> <span class="progressBarCaption"></span>&nbsp;&nbsp; <a href="#" id="staysToggleLink" class="stays"></a> <span id="staysNavText" class="stays"></span> &nbsp;|&nbsp; <a href="#" id="nightsToggleLink" class="nights"></a> <span id="nightsNavText" class="nights"></span> &nbsp;|&nbsp; <a href="#" id="pointsToggleLink" class="points"></a> <span id="pointsNavText" class="points"></span> </p>
+        </div>
+        <div class="nondiamondCompleteUser">
+          <div class="progress_graph stays">
+            <div class="my_acct_progress_bar">
+              <div class="current_progress"></div>
+              <div class="progress_section">
+                <div class="blue bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip">
+                    <div class="level_tooltip blue_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+                <div class="silver bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip">
+                    <div class="level_tooltip silver_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+                <div class="gold bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip" style="visibility: hidden;">
+                    <div class="level_tooltip gold_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+                <div class="diamond bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip">
+                    <div class="level_tooltip diamond_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="staysMessage"></p>
+          </div>
+          <div class="progress_graph nights">
+            <div class="my_acct_progress_bar">
+              <div class="current_progress"></div>
+              <div class="progress_section">
+                <div class="blue bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip">
+                    <div class="level_tooltip blue_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+                <div class="silver bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip">
+                    <div class="level_tooltip silver_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+                <div class="gold bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip" style="visibility: hidden;">
+                    <div class="level_tooltip gold_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+                <div class="diamond bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip">
+                    <div class="level_tooltip diamond_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="nightsMessage"></p>
+          </div>
+          <div class="progress_graph points">
+            <div class="my_acct_progress_bar">
+              <div class="current_progress"></div>
+              <div class="progress_section">
+                <div class="blue bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip">
+                    <div class="level_tooltip blue_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+                <div class="silver bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip">
+                    <div class="level_tooltip silver_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+                <div class="gold bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip" style="visibility: hidden;">
+                    <div class="level_tooltip gold_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+                <div class="diamond bar_section">
+                  <div class="label"></div>
+                  <div class="hhonors_tip">
+                    <div class="level_tooltip diamond_progress_tooltip"> &nbsp; <span class="arrow_top">&nbsp;</span> </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="pointsMessage"></p>
+          </div>
+        </div>
+      </div>
+      <!-- Member status end --> 
+    </div>
+    <!--  End Account View --> 
+    <!--  Login Error View -->
+    <div id="login_error_view" class="header_content_container ac"> <span class="login_error_message">&nbsp;</span> </div>
+    <!--  End Login Error View --> 
+  </div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+// Assigning the page title which comes from CMS to form hidden variable
+document.getElementById('loginPageTitleLoginForm').value = document.title;
+document.getElementById('loginPageTitleResForm').value = document.title;
+//]]>
+</script>
+<div id="body_wrapper">
+  <div id="page_wrapper">
+    <div class="ls-canvas" id="header-canvas">
+      <div class="ls-row" id="header-row">
+        <div class="ls-fxr" id="ls-gen1-ls-fxr">
+          <div class="ls-area" id="ls-row-1-area-1">
+            <div class="ls-area-body" id="ls-gen2-ls-area-body">
+              <div class="ls-cmp-wrap ls-1st" id="w1324301544614">
+                <div class="iw_component" id="1324301544614">
+                  <div class="content">
+                    <div class="brand_search_wrapper" role="search">
+                      <form id="search_form" action="/en_US/gi/search/keywordsearch/keywordsearch.htm" method="post">
+                        <label for="search_hilton_worldwide">Search</label>
+                        <input id="search_hilton_worldwide" name="keyword" type="text" value="Search"/>
+                        <input type="hidden" value="en_US" name="language" />
+                        <input type="submit" name="search_button" id="search_button" value="Search">
+                      </form>
+                    </div>
+                  </div>
+                  <div id="brand_header_outer_wrapper">
+                    <div id="inner_container">
+                      <div class="content">
+                        <div id="logo_box">
+                          <div id="left_element"></div>
+                          <a href="/en/index.html" title="Hilton Garden Inn"><img src="../../skins/en_US/GI/img/logo_brand_GI.png" alt="Hilton Garden Inn"></a>
+                          <div style="display:none;" id="brand">GI</div>
+                        </div>
+                        <div aria-multiselectable="false" dir="ltr" id="brandNavigation" role="navigation">
+                          <p class="skip"> <a href="#content">Skip brand navigation</a> </p>
+                          <ul dir="ltr" class="ac" id="primary_nav_list" aria-label="brand">
+                            <li id="find_a_hotel"> <a href="/en_US/gi/search/findhotels/index.htm">Find a Hotel</a> </li>
+                            <li class=""> <a role="tab" id="menu_item_offers" href="/en/offers/index.htm">Offers</a> </li>
+                            <li class=""> <a role="tab" id="menu_item_events" href="/en/events/index.html">Meetings and Events</a> </li>
+                            <li class="last "> <a role="tab" id="menu_item_about" href="/en/about/index.html">About Hilton Garden Inn</a> </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div id="header_top_row"></div>
+                      <div class="ac" id="header_bottom_row">
+                        <div class="content">
+                          <div class="ac" id="brand_nav_content_container">
+                            <div id="find_hotel_container">
+                              <p class="skip"> <a href="">skip form</a> </p>
+                              <!--ls:begin[BookingWidget]-->
+                              
+                              <div class="booking_widget">
+                                <div id="homePageSearchWidget">
+                                  <div id="contentbx1">
+                                    <div id="findhotel" dir="ltr">
+                                      <form id="frmfindHotel" name="frmfindHotel" class="loadSearchForm" action="/en_US/gi/search/findhotels/index.htm" method="POST">
+                                        <div id="form_row_1" class="ac">
+                                          <p id="all_search_input" class="oneBox"> <span class="labelTop" id="search_one_search_label">Where are you going?</span> <span class="spanTextInput">
+                                            <label class="labelOneBoxHint" for="hotelSearchOneBox">City, airport, address, attraction, or hotel</label>
+                                            <input id="hotelSearchOneBox" name="searchQuery" class="text" tabindex="504" type="text" value="" maxlength="100" autocomplete="off"/>
+                                            </span> </p>
+                                          <fieldset id="fsDates">
+                                            <fieldset id="fsCheckin">
+                                              <label for="checkin" class="labelTop arrival">Arrival</label>
+                                              <span class="spanTextInput" dir="ltr">
+                                              <input id="checkin" name="arrivalDate" class="text date" tabindex="505" aria-owns="ui-datepicker-div" aria-haspopup="true" aria-describedby="arrivalPopupInstruction" type="text" value=""/>
+                                              <span id="arrivalPopupInstruction" style="display:none;">You are now focused on a datepicker field. Press the down arrow to enter the calendar table. Once focused on the table, press left or right to navigate days. Press up or down to navigate between weeks. Enter to select. Escape to close datepicker. Your arrival date must be within the next year.</span> </span> <span class="small labelTop" id="checkinDayOfWeek">&nbsp;</span>
+                                            </fieldset>
+                                            <fieldset id="fsCheckout">
+                                              <label for="checkout" class="labelTop departure">Departure</label>
+                                              <span class="spanTextInput" dir="ltr">
+                                              <input id="checkout" name="departureDate" class="text date" tabindex="506" aria-owns="ui-datepicker-div" aria-haspopup="true" aria-describedby="departurePopupInstruction" type="text" value=""/>
+                                              <span id="departurePopupInstruction" style="display:none;">You are now focused on a datepicker field. Press the down arrow to enter the calendar table. Once focused on the table, press left or right to navigate days. Press up or down to navigate between weeks. Enter to select. Escape to close datepicker. Your departure date must be within 4 months after your arrival date.</span> </span> <span class="small labelTop" id="checkoutDayOfWeek">&nbsp;</span>
+                                            </fieldset>
+                                          </fieldset>
+                                          <!--  end dates --> 
+                                        </div>
+                                        <div id="expanded_form_view" class="ac">
+                                          <div class="column col1">
+                                            <fieldset id="fsFlexibleDates">
+                                              <p>
+                                                <input id="flexibleDates" name="flexibleDates" class="checkbox" tabindex="516" type="checkbox" value="true"/>
+                                                <input type="hidden" name="_flexibleDates" value="on"/>
+                                                <label for="flexibleDates">Use flexible dates</label>
+                                              </p>
+                                            </fieldset>
+                                            <p class="fsHhonorsRewardsCheckbox">
+                                              <input id="checkRewardSearch" name="rewardBooking" class="checkbox"
+	 type="checkbox" value="true" tabindex="517"/>
+                                              <label for="checkRewardSearch">Use <strong>HHonors Points</strong></label>
+                                            </p>
+                                          </div>
+                                          <div class="column col2">
+                                            <fieldset id="fsRooms">
+                                              <table id="tableRoomQuantity" class="tableRoomQuantity">
+                                                <tr>
+                                                  <th scope="col" class="colNumberOfRooms"> Rooms </th>
+                                                  <th scope="col" class="colNumberOfAdults"> Adults <span class="hint">(18+)</span> </th>
+                                                  <th scope="col" class="colNumberOfChildren"> Children </th>
+                                                </tr>
+                                                <tr id="trRoom1" class="trRoom">
+                                                  <td class="colNumberOfRooms"><label class="hidden_label" for="numberOfRooms">Rooms</label>
+                                                    <select id="numberOfRooms" name="numberOfRooms" tabindex="507" class="numberOfRooms" onchange="showAppropriateNumberOfRoomRows(this.options[this.selectedIndex].value, this);">
+                                                      <option value="1" selected="selected">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                      <option value="5">5</option>
+                                                      <option value="6">6</option>
+                                                      <option value="7">7</option>
+                                                      <option value="8">8</option>
+                                                      <option value="9">9</option>
+                                                      <option value="10">10</option>
+                                                      <option value="11">11</option>
+                                                      <option value="12">12</option>
+                                                      <option value="13">13</option>
+                                                      <option value="14">14</option>
+                                                      <option value="15">15</option>
+                                                      <option value="16">16</option>
+                                                      <option value="17">17</option>
+                                                      <option value="18">18</option>
+                                                      <option value="19">19</option>
+                                                      <option value="20">20</option>
+                                                      <option value="21">21</option>
+                                                      <option value="22">22</option>
+                                                      <option value="23">23</option>
+                                                      <option value="24">24</option>
+                                                      <option value="25">25</option>
+                                                      <option value="26">26+</option>
+                                                    </select></td>
+                                                  <td class="colNumberOfAdults"><label class="hidden_label" for="room1Adults">Adults in Room 1</label>
+                                                    <select id="room1Adults" name="numberOfAdults[0]" tabindex="508">
+                                                      <option value="1" selected="selected">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                    </select>
+                                                    <input type="hidden" disabled="disabled" id="bank_room1Adults" value="1" /></td>
+                                                  <td class="colNumberOfChildren"><label class="hidden_label" for="room1Children">Children in Room 1</label>
+                                                    <select id="room1Children" name="numberOfChildren[0]" tabindex="509">
+                                                      <option value="0" selected="selected">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                    </select>
+                                                    <input type="hidden" disabled="disabled" id="bank_room1Children" value="0" /></td>
+                                                </tr>
+                                                <tr id="trRoom2" class="trRoom">
+                                                  <td class="roomNumberLabel"><b>Room 2</b>: </td>
+                                                  <td class="colNumberOfAdults"><label class="hidden_label" for="room2Adults">Adults in Room 2</label>
+                                                    <select id="room2Adults" name="numberOfAdults[1]" tabindex="510">
+                                                      <option value="1" selected="selected">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                    </select>
+                                                    <input type="hidden" disabled="disabled" id="bank_room2Adults" value="1" /></td>
+                                                  <td class="colNumberOfChildren"><label class="hidden_label" for="room2Children">Children in Room 2</label>
+                                                    <select id="room2Children" name="numberOfChildren[1]" tabindex="511">
+                                                      <option value="0" selected="selected">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                    </select>
+                                                    <input type="hidden" disabled="disabled" id="bank_room2Children" value="0" /></td>
+                                                </tr>
+                                                <tr id="trRoom3" class="trRoom">
+                                                  <td class="roomNumberLabel"><b>Room 3</b>: </td>
+                                                  <td class="colNumberOfAdults"><label class="hidden_label" for="room3Adults">Adults in Room 3</label>
+                                                    <select id="room3Adults" name="numberOfAdults[2]" tabindex="512">
+                                                      <option value="1" selected="selected">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                    </select>
+                                                    <input type="hidden" disabled="disabled" id="bank_room3Adults" value="1" /></td>
+                                                  <td class="colNumberOfChildren"><label class="hidden_label" for="room3Children">Children in Room 3</label>
+                                                    <select id="room3Children" name="numberOfChildren[2]" tabindex="513">
+                                                      <option value="0" selected="selected">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                    </select>
+                                                    <input type="hidden" disabled="disabled" id="bank_room3Children" value="0" /></td>
+                                                </tr>
+                                                <tr id="trRoom4" class="trRoom">
+                                                  <td class="roomNumberLabel"><b>Room 4</b>: </td>
+                                                  <td class="colNumberOfAdults"><label class="hidden_label" for="room4Adults">Adults in Room 4</label>
+                                                    <select id="room4Adults" name="numberOfAdults[3]" tabindex="514">
+                                                      <option value="1" selected="selected">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                    </select>
+                                                    <input type="hidden" disabled="disabled" id="bank_room4Adults" value="1" /></td>
+                                                  <td class="colNumberOfChildren"><label class="hidden_label" for="room4Children">Children in Room 4</label>
+                                                    <select id="room4Children" name="numberOfChildren[3]" tabindex="515">
+                                                      <option value="0" selected="selected">0</option>
+                                                      <option value="1">1</option>
+                                                      <option value="2">2</option>
+                                                      <option value="3">3</option>
+                                                      <option value="4">4</option>
+                                                    </select>
+                                                    <input type="hidden" disabled="disabled" id="bank_room4Children" value="0" /></td>
+                                                </tr>
+                                              </table>
+                                            </fieldset>
+                                          </div>
+                                          <div class="column col3"> <span class="links"> <a href="http://hiltonworldwide.hilton.com/en/ww/ourbestrates/overview.jhtml" class="best_rates_link popup_link">Our Best Rates Guarantee</a> <span class="options_separator">|</span> <span class="more_options_link">More Options</span> <span class="less_options_link">Less Options</span> </span> <a href="#searchWidgetOptionalFields" tabindex="518" id="rate_toggler" class="searchToggler collapsed" title="Add special rate codes" onclick="toggleOptionalFields(this); return false;">Add special rate codes</a> <br/>
+                                            <span class="rate_examples">(AAA, AARP, etc)</span> </div>
+                                          <div class="column col4"> 
+                                            <script type="text/javascript">
+//<![CDATA[
+var roomKeyExecute = function() {
+		if('' != '' && '' != null) {
+			if(jQuery('input[name="searchType"]').val() == 'ALL' && (BRAND.id == 'HP' || BRAND.id == 'HT' || BRAND.id == 'HW' || false)){
+				setRoomKeyParameters('frmfindHotel', 'c8fb3636c239e34248d19fc92fbe6d6e', 'http://www3.hilton.com/skins/common/img/logo_brand-GI.gif', 'GI_GW_Home', '', 'https://secure3.hilton.com/en_US/gi/reservation/book.htm?ctyhocn=');
+			} else if((jQuery('input[name="searchType"]').val() == 'PROP' && BRAND.id == 'HT')) {
+				// get the ctyhocn from the "Home2 Suites location" dropdown widget as we need to pass selected option to room key
+				var ctyhocnDropdownVal = jQuery('#frmfindHotel').find('select[id=hotelSearchOneDropDown]').val();
+				var ctyhocn = ctyhocnDropdownVal != null ? ctyhocnDropdownVal : '';
+				setRoomKeyParameters('frmfindHotel', 'c8fb3636c239e34248d19fc92fbe6d6e', 'http://www3.hilton.com/skins/common/img/logo_brand-GI.gif', 'GI_GW_Home', ctyhocn, 'https://secure3.hilton.com/en_US/gi/reservation/book.htm?ctyhocn=');
+			} else if(!(jQuery('input[name="searchType"]').val() == 'PROP' && false)) {
+				setRoomKeyParameters('frmfindHotel', 'c8fb3636c239e34248d19fc92fbe6d6e', 'http://www3.hilton.com/skins/common/img/logo_brand-GI.gif', 'GI_GW_Home', '', 'https://secure3.hilton.com/en_US/gi/reservation/book.htm?ctyhocn=');
+			}
+		} else {
+			if(jQuery('input[name="searchType"]').val() == 'PROP' && BRAND.id == 'HT'){
+				// get the ctyhocn from the "Home2 Suites location" dropdown widget as we need to pass selected option to room key
+				var ctyhocn = jQuery('#frmfindHotel').find('select[id=hotelSearchOneDropDown]').val();
+				setRoomKeyParameters('frmfindHotel', 'c8fb3636c239e34248d19fc92fbe6d6e', 'http://www3.hilton.com/skins/common/img/logo_brand-GI.gif', 'GI_GW_Home', ctyhocn, '');
+			} else if(jQuery('input[name="searchType"]').val() == 'ALL' || BRAND.id == 'HT'){
+				setRoomKeyParameters('frmfindHotel', 'c8fb3636c239e34248d19fc92fbe6d6e', 'http://www3.hilton.com/skins/common/img/logo_brand-GI.gif', 'GI_GW_Home', '', '');
+			}
+		}
+	};
+//]]>
+</script> 
+                                            <a href="javascript:jQuery('#frmfindHotel').submit();" tabindex="519" class="find_button cta_button findItButton" title="Find it" role="button"><span class="text">Find it</span> <span class="arrow_icon">&nbsp;</span></a>
+                                            <button class="hide" type="submit" name="gobutton" id="gobutton" tabindex="660">Find it</button>
+                                            <a href="javascript:jQuery('#frmfindHotel').submit();" id="check_availability" class="find_button cta_button findItButton" title="Check Availability" role="button"><span class="text">Check Availability</span></a> </div>
+                                          <div id="searchWidgetOptionalFields" class="ac">
+                                            <fieldset id="fsSpecialAccounts">
+                                              <div class="field_container ac">
+                                                <p class="fsP inlineBlock" id="fsSpecialCodePromotion">
+                                                  <label for="specialCodePromotion">Promotion/Offer code:</label>
+                                                  <span class="spanTextInput">
+                                                  <input id="specialCodePromotion" name="promoCode" class="text" tabindex="521" type="text" value="" maxlength="6"/>
+                                                  </span> </p>
+                                                <p style="display: block;" class="fsP inlineBlock" id="fsSpecialCodeGroup">
+                                                  <label for="specialCodeGroup">Group code:</label>
+                                                  <span class="spanTextInput">
+                                                  <input id="specialCodeGroup" name="groupCode" class="text" tabindex="522" type="text" value="" maxlength="6"/>
+                                                  </span> </p>
+                                                <p class="fsP inlineBlock" id="fsSpecialCodeCorporate">
+                                                  <label for="specialCodeCorporate">Corporate account:</label>
+                                                  <span class="spanTextInput">
+                                                  <input id="specialCodeCorporate" name="corporateId" class="text" tabindex="523" type="text" value="" maxlength="10"/>
+                                                  </span> </p>
+                                              </div>
+                                              <div style="display: block;" class="additionalCodes">
+                                                <p style="display: block;" class="fsP" id="fsSpecialCodeTravelAgent">
+                                                  <input id="specialCodeTravelAgent" name="travelAgentRate" class="checkbox" tabindex="524" type="checkbox" value="true"/>
+                                                  <input type="hidden" name="_travelAgentRate" value="on"/>
+                                                  <label for="specialCodeTravelAgent">Travel agent</label>
+                                                </p>
+                                                <p class="fsP" id="fsSpecialCodeAAA">
+                                                  <input id="specialCodeAAA" name="aaaRate" class="checkbox" tabindex="525" type="checkbox" value="true"/>
+                                                  <input type="hidden" name="_aaaRate" value="on"/>
+                                                  <label for="specialCodeAAA">AAA rate *</label>
+                                                </p>
+                                                <p id="fsSpecialCodeAARP" class="fsP">
+                                                  <input id="specialCodeAARP" name="aarpRate" class="checkbox" tabindex="526" type="checkbox" value="true"/>
+                                                  <input type="hidden" name="_aarpRate" value="on"/>
+                                                  <label for="specialCodeAARP">AARP rate *</label>
+                                                </p>
+                                                <p class="fsP" id="fsSpecialCodeSenior">
+                                                  <input id="specialCodeSenior" name="seniorRate" class="checkbox" tabindex="527" type="checkbox" value="true"/>
+                                                  <input type="hidden" name="_seniorRate" value="on"/>
+                                                  <label for="specialCodeSenior">Senior rate *</label>
+                                                </p>
+                                                <p class="fsP" id="fsSpecialCodeGovt">
+                                                  <input id="specialCodeGovt" name="governmentRate" class="checkbox" tabindex="528" type="checkbox" value="true"/>
+                                                  <input type="hidden" name="_governmentRate" value="on"/>
+                                                  <label for="specialCodeGovt">Government / Military rates *</label>
+                                                </p>
+                                                <p class="hint">* ID required at check-in</p>
+                                              </div>
+                                            </fieldset>
+                                            <a href="javascript: toggleOptionalFields(jQuery('#rate_toggler'));" tabindex="529" class="close_button" title="Close">Close</a> </div>
+                                          <input id="offerId" name="offerId" type="hidden" value=""/>
+                                          <a href="javascript:app.util.hideFindHotel();" class="close_form">Close</a> </div>
+                                        <input type="hidden" id="bookButton "name="bookButton" value="false"/>
+                                        <input id="searchType" name="searchType" type="hidden" value="ALL"/>
+                                        <input id="roomKeyEnable" name="roomKeyEnable" type="hidden" value="false"/>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--ls:end[BookingWidget]--></div>
+                            <div dir="ltr" id="sub_nav_container">
+                              <ul aria-hidden="true" role="tabpanel" class="sub_nav_content">
+                                <li class="feature">
+                                  <p class="skip"> <a href="">close tab panel</a> </p>
+                                  <div class="feature_detail"> <span class="title">Offers</span><span class="caption">All the amenities HGI has to offer at an even better value. </span><a href="/en/offers/index.htm">See all special offers </a> </div>
+                                  <ul>
+                                    <li> <a href="/en/offers/index.htm">Featured Offers</a> </li>
+                                    <li> <a href="/en/offers/index.htm">Last Minute Deals</a> </li>
+                                    <li> <a href="/en/offers/index.htm">Popular Offers</a> </li>
+                                  </ul>
+                                  <span class="hidden">End of tab panel</span> </li>
+                              </ul>
+                              <ul aria-hidden="true" role="tabpanel" class="sub_nav_content">
+                                <li>
+                                  <p class="skip"> <a href="">close tab panel</a> </p>
+                                  <span class="title">Weddings</span><span class="caption">Book group rates or host the special day start to finish.</span><a href="/en/events/weddings/index.html">Organize your wedding </a> </li>
+                                <li> <span class="title">Meetings </span><span class="caption">Easy-to-use business tools and amenities for your conference.</span><a href="/en/events/meetings/index.html">Book a meeting</a> </li>
+                                <li class="last"> <span class="title">Special Events </span><span class="caption">Planning tools &amp; great group rates no matter the occasion. </span><a href="/en/events/special/index.html">Plan your event </a><span class="hidden">End of tab panel</span> </li>
+                              </ul>
+                              <ul aria-hidden="true" role="tabpanel" class="sub_nav_content">
+                                <li>
+                                  <p class="skip"> <a href="">close tab panel</a> </p>
+                                  <span class="title">Why Hilton Garden Inn</span><span class="caption">We&rsquo;re here to help you be successful with great service and complimentary amenities.</span><a href="/en/about/why-hilton-garden-inn/index.html">Read more about our amenities</a> </li>
+                                <li> <span class="title">Locations</span><span class="caption">Search over 500 Hilton Garden Inn hotels to find one where you need to be.</span><a href="/en/about/locations/index.html">Find a Hilton Garden Inn</a> </li>
+                                <li class="last"> <span class="title">New Hotels</span><span class="caption">See our new hotels and find out where we&rsquo;re scheduled to open soon.</span><a href="/en/about/new-hotels/index.html">See all new hotels </a><span class="hidden">End of tab panel</span> </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <span tabindex="-1" class="hidden" id="content">&nbsp;</span> </div>
+              </div>
+            </div>
+          </div>
+          <div class="ls-row-clr"></div>
+        </div>
+      </div>
+    </div>
+    <div id="main_content">
+      <div xmlns="" class="ls-canvas two_column" id="two-column-on-row-canvas">
+        <div class="ls-row content_row content ac" id="ls-row-1">
+          <div class="ls-fxr" id="ls-gen1-ls-fxr">
+            <div class="ls-area left_column" id="ls-row-1-area-1">
+              <div class="ls-area-body" id="ls-gen2-ls-area-body">
+                <div class="ls-cmp-wrap ls-1st" id="w1328530448707">
+                  <div class="iw_component" id="1328530448707">
+                    <div dir="ltr" role="navigation" class="property_navigation_container" id="secondary_nav">
+                      <p class="skip"> <a href="#skip_secondary_nav">Skip secondary navigation</a> </p>
+                      <ul>
+                        <li class="selected"> <a href="/en/about/index.html" class="" id="overview" title="Overview" name="Overview">Overview</a>
+                          <ul class="subnav_list">
+                            <li class=""></li>
+                          </ul>
+                        </li>
+                        <li class=""> <a href="/en/about/why-hilton-garden-inn/index.html" class="" id="why" title="Why Hilton Garden Inn" name="Why Hilton Garden Inn">Why Hilton Garden Inn</a> </li>
+                        <li class=""> <a href="/en/about/locations/index.html" class="" id="locations" title="Locations" name="Locations">Locations</a> </li>
+                        <li class=""> <a href="/en/about/new-hotels/index.html" class="" id="newhotels" title="New Hotels" name="New Hotels">New Hotels</a> </li>
+                      </ul>
+                      <span class="hidden" tabindex="-1" name="skip_secondary_nav" id="skip_secondary_nav">&nbsp;</span> </div>
+                  </div>
+                </div>
+                <div class="ls-cmp-wrap" id="w1330279949734">
+                  <div class="iw_component" id="1330279949734">
+                    <div class="content_array_component">
+                      <div dir="ltr" class="general_image_component content_component ac"> <a href="/en/about/promise.html"><img src="../../resources/media/gi/en_US/img/shared/basic_content_item/GI_promiselogo_188x108_FitToBoxSmallDimension_Center.jpg" alt="Hilton Garden Inn - Satisfaction Promise Logo"></a><span class="title">Hilton Garden Inn Satisfaction Promise</span>
+                        <div class="copy_area">
+                          <p><strong>We promise to do whatever it takes to ensure you&rsquo;re satisfied, or you don&rsquo;t pay. You can count on us. GUARANTEED&trade;.</strong></p>
+                        </div>
+                        <a href="/en/about/promise.html" class="cta_button" id="satisfactionpromise" title="Satisfaction Promise" name="Satisfaction Promise">Satisfaction Promise</a> </div>
+                      <div dir="ltr" class="general_image_component content_component ac"> <a href="/en/about/tools/social-media.html"><img src="../../resources/media/gi/en_US/img/shared/basic_content_item/GI_iphone_188x108_FitToBoxSmallDimension_Center.jpg" alt="Hilton Garden Inn - iPhone App"></a><span class="title">HGI ON THE GO</span>
+                        <div class="copy_area">
+                          <p>Get the best rates, get directions and find the Hilton Garden Inn nearest you, wherever you are.</p>
+                        </div>
+                        <a href="/en/about/tools/social-media.html" class="cta_button overlay_link" id="Gettheapp " title="Get the app " name="Get the app ">Get the app </a> </div>
+                      <div dir="ltr" class="general_image_component content_component ac"> <a href="/en/about/new-hotels/index.html"><img src="../../resources/media/gi/en_US/img/shared/basic_content_item/GI_airporthotel_188x108_FitToBoxSmallDimension_Center.jpg" alt="Hilton Garden Inn - Hotel Exterior"></a><span class="title">Look at Our Expanding Footprint</span>
+                        <div class="copy_area">
+                          <p>Visit our new hotels page to see our global footprint</p>
+                        </div>
+                        <a href="/en/about/new-hotels/index.html" class="cta_button" id="ourfootprint" title="Our Footprint" name="Our Footprint">Our Footprint</a> </div>
+                      <div dir="ltr" class="general_image_component content_component ac"> <a href="/en/about/tools/social-media.html"><img src="../../resources/media/gi/en_US/img/shared/basic_content_item/GI_couch_188x108_FitToBoxSmallDimension_Center.jpg" alt="Hilton Garden Inn - Man on iPad"></a><span class="title">Stay Connected</span>
+                        <div class="copy_area">
+                          <p>Anytime. Anywhere. The World of Hilton Garden Inn is more accessible than ever.</p>
+                        </div>
+                        <a href="/en/about/tools/social-media.html" class="cta_button overlay_link" id="stayconnected" title="Stay Connected" name="Stay Connected">Stay Connected</a> </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ls-area right_column" id="ls-row-1-area-2">
+              <div class="ls-area-body" id="ls-gen3-ls-area-body"> 
+                <!-- INSERT NEW CONTENT HERE -->
+              </div>
+            </div>
+            <div class="ls-row-clr"></div>
+          </div>
+        </div>
+        <div class="ls-row content_row content ac" id="ls-row-2">
+          <div class="ls-fxr" id="ls-gen4-ls-fxr">
+            <div class="ls-area" id="ls-row-2-area-1">
+              <div class="ls-area-body" id="ls-gen5-ls-area-body">
+                <div class="ls-cmp-wrap ls-1st" id="w1325837178065">
+                  <div class="iw_component" id="1325837178065">
+                    <div class="ac" id="brand_social">
+                      <div class="social" dir="ltr">
+                        <ul>
+                          <li>
+                            <ul aria-label="social networking" class="show_captions" role="navigation">
+                              <li class="facebook"> <a target="_blank" href="http://www.facebook.com/hiltongardeninn" name="social_facebook" title="Like us on Facebook"><span>Like us on Facebook</span></a> </li>
+                              <li class="twitter"> <a target="_blank" href="https://twitter.com/HiltonGardenInn" name="social_twitter" title="Follow us on Twitter"><span>Follow us on Twitter</span></a> </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="enews" dir="ltr">
+                        <form class="ac" name="enews_form" id="enews_form" action="/en_US/gi/doxch.htm?dst=http://ATG-GI/en/gi/signup/email_profile.jhtml" method="post">
+                          <label for="enews_input">Email Newsletter<span class="hidden">Enter Email Address</span></label>
+                          <input name="enews_input" class="enews_field" value="" id="enews_input" maxlength="256" type="text">
+                          <div class="enews_button"> <a class="btn_text" href="javascript:document.enews_form.submit();" role="button">Sign UP</a> </div>
+                          <input class="enews_submit" id="enews_submit" type="button">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ls-row-clr"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="lower_page_wrapper">
+    <div class="content ac"> &nbsp; </div>
+  </div>
+  <div id="lower_container">
+    <div class="content">
+      <div class="ls-canvas" id="ls-canvas">
+        <div class="ls-row" id="ls-row-1">
+          <div class="ls-fxr" id="ls-gen1-ls-fxr">
+            <div class="ls-area footerMain" id="brandFooter">
+              <div class="ls-area-body" id="ls-gen2-ls-area-body">
+                <div class="ls-cmp-wrap ls-1st" id="w1324301544582">
+                  <div class="iw_component" id="1324301544582">
+                    <ul class="skiplist">
+                      <li class="skip"> <a href="#global_header_wrapper">Skip to top of page</a> </li>
+                    </ul>
+                    <div id="footer_wrapper">
+                      <div class="ac" id="brand_bar">
+                        <ul id="footer_logos">
+                          <li id="brand_bar_HH"> <a href="http://hhonors3.hilton.com/en/index.html" title="Click to view Hilton HHonors"><span class="brand_name">Hilton HHonors Worldwide</span></a> </li>
+                          <li id="brand_bar_WA"> <a class="
+												footer_logo
+											" href="http://waldorfastoria3.hilton.com/en/index.html" title="Click to view Waldorf Astoria Hotels &amp; Resorts">
+                            <div> <span class="brand_name">Waldorf Astoria Collection</span> </div>
+                            <span class="brand_tooltip">
+                            <div> <span class="message">The luxury brand offering a unique service experience and world&rsquo;s landmark hotels.</span> </div>
+                            <span class="arrow_bottom"></span></span></a> </li>
+                          <li id="brand_bar_CH"> <a class="
+												footer_logo
+											" href="http://conradhotels3.hilton.com/en/index.html" title="Click to view Conrad Hotels &amp; Resorts&trade;">
+                            <div> <span class="brand_name">Conrad Hotels &amp; Resorts</span> </div>
+                            <span class="brand_tooltip">
+                            <div> <span class="message">A world of style, service and connection for today&rsquo;s sophisticated traveler</span> </div>
+                            <span class="arrow_bottom"></span></span></a> </li>
+                          <li id="brand_bar_HI"> <a class="
+												footer_logo
+											" href="http://www3.hilton.com/en/index.html" title="Click to view Hilton Hotels &amp; Resorts">
+                            <div> <span class="brand_name">Hilton Hotels</span> </div>
+                            <span class="brand_tooltip">
+                            <div> <span class="message">The global leader in hospitality with more than 530 hotels &amp; resorts across six continents.</span> </div>
+                            <span class="arrow_bottom"></span></span></a> </li>
+                          <li id="brand_bar_DT"> <a class="
+												footer_logo
+											" href="http://doubletree3.hilton.com/en/index.html" title="Click to view DoubleTree By Hilton&trade;">
+                            <div> <span class="brand_name">DoubleTree </span> </div>
+                            <span class="brand_tooltip">
+                            <div> <span class="message">Warm. Comfortable. Smart. The hotel that turns travel into a human experience again.</span> </div>
+                            <span class="arrow_bottom"></span></span></a> </li>
+                          <li id="brand_bar_ES"> <a class="
+												footer_logo
+											" href="http://embassysuites3.hilton.com/en/index.html" title="Click to view Embassy Suites Hotels&trade;">
+                            <div> <span class="brand_name">Embassy Suites</span> </div>
+                            <span class="brand_tooltip">
+                            <div> <span class="message">Enjoy a complimentary cooked-to-order breakfast and more at our upscale all-suite hotels.</span> </div>
+                            <span class="arrow_bottom"></span></span></a> </li>
+                          <li id="brand_bar_GI"> <a class="
+												footer_logo
+											" href="/en/index.html" title="Click to view Hilton Garden Inn&reg;">
+                            <div> <span class="brand_name">Hilton Garden Inn</span> </div>
+                            <span class="brand_tooltip">
+                            <div> <span class="message">Treat yourself with amenities that help you work smarter, eat well, sleep deeply and stay fit.</span> </div>
+                            <span class="arrow_bottom"></span></span></a> </li>
+                          <li id="brand_bar_HP"> <a class="
+												footer_logo
+											" href="http://hamptoninn3.hilton.com/en/index.html" title="Click to view Hampton">
+                            <div> <span class="brand_name">Hampton</span> </div>
+                            <span class="brand_tooltip">
+                            <div> <span class="message">Count on Hampton to deliver quality, value, consistency and service with a smile.</span> </div>
+                            <span class="arrow_bottom"></span></span></a> </li>
+                          <li id="brand_bar_HW"> <a class="
+												footer_logo
+											" href="http://homewoodsuites3.hilton.com/en/index.html" title="Click to view Homewood Suites">
+                            <div> <span class="brand_name">Homewood Suites</span> </div>
+                            <span class="brand_tooltip">
+                            <div> <span class="message">Whether you're traveling for a few nights or for a few months, you can Make Yourself at Home&reg;</span> </div>
+                            <span class="arrow_bottom"></span></span></a> </li>
+                          <li id="brand_bar_HT"> <a class="
+												footer_logo
+											" href="http://home2suites3.hilton.com/en/index.html" title="Click to view Home2 Suites By Hilton">
+                            <div> <span class="brand_name">Home2 Suites</span> </div>
+                            <span class="brand_tooltip">
+                            <div> <span class="message">Introducing Home2 Suites by Hilton&reg;-- an all-suite brand of extended stay hotels.</span> </div>
+                            <span class="arrow_bottom"></span></span></a> </li>
+                          <li id="brand_bar_GV"> <a class="
+												footer_logo
+											" href="http://www.hiltongrandvacations.com/" title="Click to view Hilton Grand Vacations&reg;">
+                            <div> <span class="brand_name">Hilton Grand Vacations</span> </div>
+                            <span class="brand_tooltip">
+                            <div> <span class="message">Enjoy all of the benefits of
+                              owning your own vacation home &ndash; with none of the
+                              hassles.</span> </div>
+                            <span class="arrow_bottom"></span></span></a> </li>
+                          <li> <a class="about_brands arrow_link" href="http://www.hiltonworldwide.com/portfolio/" title="About our brands ">About our brands </a> </li>
+                        </ul>
+                      </div>
+                      <div class="ac" id="footer_bottom_container">
+                        <div class="link_list_container ac">
+                          <h6 class="link_list_title"> <span>Global Sites:</span> </h6>
+                          <ul class="footer_links_list">
+                            <li> <a href="http://hiltongardeninn.hilton.de/">
+                              <div>Germany</div>
+                              </a> </li>
+                            <li class="last"> <a href="http://hiltongardeninn.hilton.co.jp/"><span>Japan</span></a> </li>
+                          </ul>
+                        </div>
+                        <div class="link_list_container ac">
+                          <ul role="contentinfo" class="footer_links_list">
+                            <li> <a href="/en/about/index.html">
+                              <div>About Hilton Garden Inn</div>
+                              </a> </li>
+                            <li> <a href="/en/sitemap/index.html">
+                              <div>Site Map</div>
+                              </a> </li>
+                            <li> <a href="http://www.hiltonworldwide.com/">
+                              <div>Hilton Worldwide</div>
+                              </a> </li>
+                            <li> <a href="http://hiltonworldwide.com/careers/index.htm">
+                              <div>Careers</div>
+                              </a> </li>
+                            <li> <a href="http://hiltonworldwide.com/development/index.htm">
+                              <div>Development</div>
+                              </a> </li>
+                            <li> <a href="http://www.hgimediacenter.com/">
+                              <div>Media</div>
+                              </a> </li>
+                            <li> <a href="http://www.roomkey.com/" target="_blank">
+                              <div>RoomKey.com</div>
+                              </a> </li>
+                            <li> <a href="/en_US/gi/doxch.htm?dst=http://ATG-GI/en/gi/customersupport/index.jhtml">
+                              <div>Customer Support</div>
+                              </a> </li>
+                            <li>
+                              <div>1-877-STAY-HGI</div>
+                            </li>
+                            <li>
+                              <div>International (+800 4445 8667)</div>
+                            </li>
+                            <li> <a href="http://hiltonworldwide1.hilton.com/en/ww/customersupport/privacy-policy.do">
+                              <div>Privacy Policy (Updated Dec 2011)</div>
+                              </a> </li>
+                            <li> <a href="/en_US/gi/doxch.htm?dst=http://ATG-GI/en/gi/info/site_usage.jhtml">
+                              <div>Site Usage Agreement</div>
+                              </a> </li>
+                            <li class="last">
+                              <div>&copy;2012 Hilton Worldwide</div>
+                            </li>
+                          </ul>
+                          <ul role="contentinfo" class="footer_links_list">
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ls-row-clr"></div>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+//<![CDATA[
+//Set booking URL
+	var URL = 'https://secure3.hilton.com/en_US/gi/reservation/book.htm';
+	// Set current source market, locale, and brand
+	var SOURCEMARKET = { 'name' : 'US', 'domain' : '.com',
+			'adhocCountryCode' : 'US', 'searchRadius' : 40,
+			'distanceUnit' : 'MILES', 'international' : false };
+	var LOCALE = 'en_US';
+	var BRAND = { 'name' : 'GARDEN_INN', 'id' : 'GI', 'lowerCaseId' : 'gi' };
+	// Set DEBUG to true to enabled javascript logging.
+	var DEBUG = false;
+	var BOOK_URL = '/en_US/gi/search/findhotels/index.htm';
+	var SEARCH_URL = '/en_US/gi/search/findhotels/index.htm';
+//]]>
+</script> 
+      <script type="text/javascript" src="../../skins/common/js_comp/core.comp.min.js"></script> 
+      <script type="text/javascript" src="../../skins/en_US/js_comp/gi.comp.min.js"></script> 
+      <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f0729d149fe5049"></script> 
+      <script type="text/javascript">
+//<![CDATA[
+var transfer_dcsid = 'dcsuuftkberp17368wkcsn8pc_5z5u';	
+	
+	jQuery(document).ready(function() {
+	    jQuery('a.findItButton').click(function(e){
+		    var target = jQuery(this).attr('href');
+		    e.preventDefault();    
+			try{
+				//Execute room key method
+				roomKeyExecute.call();
+			}catch(err){
+				// doing nothing
+			}   
+			
+			//Redirect to the href value
+			//IMPORTANT: This must be wrapped in a timeout
+			window.setTimeout(function(){
+				document.location.href = target;
+			}, 0);
+    	});
+	});
+	/* Unload the room key popup */
+	roomKeyUnload();
+//]]>
+</script>
+      <noscript>
+      <img alt="" border="0" name="DCSIMG" width="1" height="1" src="http://statse.webtrendslive.com/dcsuuftkberp17368wkcsn8pc_5z5u/njs.gif?dcsuri=/nojavascript&amp;WT.js=No" />
+      </noscript>
+      <script type="text/javascript" src="../../skins/common/js/tracking/webtrends/wtCustomizations.min.js"></script> 
+      
+      <!-- WebTrends async loader --> 
+      
+      <script type="text/javascript">
+//<![CDATA[
+//---------------------------
+	// Async code load section
+	//---------------------------
+	// load the tracking code into the document namespace
+	(function () {
+		var s = document.createElement('script');
+		s.async = true;
+		s.type = "text/javascript";
+		s.src = '../../skins/common/js/tracking/webtrends/webtrends.min.js';
+		var s2 = document.getElementsByTagName("script")[0];
+		s2.parentNode.insertBefore(s, s2);
+	}());
+//]]>
+</script> 
+      <!-- end WebTrends Async loader -->
+      
+      <div id="truste17751"> 
+        <script type="text/javascript" src="https://consent.truste.com/notice?domain=hilton.com&c=truste17751&language=en"></script> 
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+<!--ls:end[body]-->

@@ -1,0 +1,19 @@
+/*@font-face { font-family: 'Gotham-Book'; src: url('../fonts/GothaBoo.eot'); src: url('../fonts/GothaBoo.eot?#iefix') format('embedded-opentype'),  url('../fonts/GothaBoo.woff') format('woff')  url('../fonts/Gotham-Book.ttf') format('truetype'),  url('GothaBoo.svg#Gotham-Book') format('svg'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Gotham-BookItalic'; src: url('../fonts/GothaBooIta.eot'); src: url('../fonts/GothaBooIta.eot?#iefix') format('embedded-opentype'),  url('../fonts/GothaBooIta.woff') format('woff')  url('Gotham-BookItalic.ttf') format('truetype'),  url('GothaBooIta.svg#Gotham-BookItalic') format('svg'); font-weight: normal; font-style: normal; }*/
+.left { float:left;}
+body { font-size:12px; font-family:Verdana, Geneva, sans-serif; }
+.brave { background:url(../images/background.jpg) no-repeat; width:976px; margin:0 auto; color:#fff; }
+.brave h1 { margin:0; padding:0; font-weight:normal; font-size:30px; line-height:40px; }
+.brave h1 span { font-size:20px; font-family:Verdana, Geneva, sans-serif; }
+.brave h2 { font-size:18px; font-weight:normal; }
+.brave .contents { padding:20px 460px 20px 20px; height:530px; }
+.brave .contents .reg { font-family:Verdana, Geneva, sans-serif; }
+.brave .contents em { font-size:14px;}
+.brave .contents .formcontainer { background:url(../images/form-background.png); padding:10px; font-family:Verdana, Geneva, sans-serif; }
+.brave .contents .hhonorslogo { margin:10px 0 10px 10px;}
+.brave .contents .hhonorslogo a {color:#fff; text-decoration:underline;}
+.brave .contents .fblogo {overflow:hidden; color:#00486e; margin-left:10px;}
+.brave .contents .fblogo a {color:#00486e; text-decoration:underline;}
+.brave .contents .fblogo p { margin:2px 0 0; padding:0;}
+.brave .contents .fblogo img { padding-right:10px;}
+.brave .legal { color:#000; padding:10px; font-size:11px; font-family:Verdana, Geneva, sans-serif; }

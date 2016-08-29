@@ -1,0 +1,5 @@
+throw 'allowScriptTagRemoting is false.';
+//#DWR-INSERT
+dwr.engine.remote.handleNewScriptSession("DFA77F2DCA54C91E223BBCC8E09F9073");
+//#DWR-REPLY
+dwr.engine.remote.handleCallback("3","0",{offers:[{name:"Plan ahead & save with Advance Purchase",subheading:"Success is getting up to 25% off* with our Advance Purchase Rates.",linkText:"View Details",thumbImageUrl:"/resources/media/gi/en_US/img/offers/information/image/100027656/GI_advancepurchase_698x399_FitToBoxSmallDimension_Center.jpg",link:"/en/offers/100027656.htm"},{name:"Hilton Garden Inn Satisfaction Promise",subheading:"",linkText:"View Details",thumbImageUrl:"/resources/media/gi/en_US/img/marketing_messages/information/100002233/GI_gisatisfactionpromise_698x399_FitToBoxSmallDimension_Center.jpg",link:"http://hiltongardeninn3.hilton.com/en/about/promise.html"},{name:"Our Best Rates Guarantee",subheading:"",linkText:"View Details",thumbImageUrl:"/resources/media/gi/en_US/img/marketing_messages/information/100002512/GI_bestratesguarantee_698x399_FitToBoxSmallDimension_Center.jpg",link:"http://www.hiltongardeninn.com/en/ww/ourbestrates/overview.jhtml"}]});

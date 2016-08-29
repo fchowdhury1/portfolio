@@ -1,0 +1,362 @@
+<!doctype html><!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+
+<head>
+</head>
+<body>
+<style type="text/css">
+			
+			/* @import url("http://homewoodsuites.hilton.com/en/promotions/media/images/tintin/jquery-fancybox-1-3-4.css"); */
+				
+			.search {
+				display: none;
+			}
+			
+			#min-height {
+				position: relative;
+				width: 100%;
+			}
+			
+			#promoSearchForm {
+				position: absolute;
+				top: 135px;
+				left: 30px;
+				padding: 0;
+				margin: 0;
+				width: 215px;
+				overflow: visible;
+				font:normal 13px/18px verdana;
+			}
+			
+			@media screen and (-webkit-min-device-pixel-ratio:0) {
+				#promoSearchForm td td td td table {
+					top: 124px;
+				}
+				.fsFormSearchButton {
+					top:260px;
+				}
+			}
+			
+			#promoSearchForm .specialsText3 {
+				color: #000000;
+				font-size:11px;
+			}
+			
+			#promoSearchForm table {
+				background-color: transparent;
+			}
+			
+			#promoSearchForm .formOB, #promoSearchForm select {
+				border:1px solid #666;
+			}
+			
+			#promoSearchForm .formOB {
+				width: 160px;
+			}
+			
+			#promoSearchForm td td td td table {
+				position:absolute;
+				left:35px;
+				top: 120px;
+				_top: 126px;
+				width:140px;
+			}
+			
+			#promoSearchForm td td td td table input {
+				margin: 0;
+			}
+			
+			/* hide the 'Find a participating hotel graphic */
+			img.imgFindParticipating {
+				display:none;
+			}
+			
+			/* the form can now have a find-it button that matches the design */
+			.fsFormSearchButton {
+				width: 136px /* width of button image */;
+				height: 36px /* height of button image */;
+				background:transparent url(http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/book_now_button.png) no-repeat top left;
+				position:absolute;
+				left:35px;
+				top:260px;
+			}
+			
+			.fsFormSearchButton img {
+				display:none;
+			}
+			
+			.promoSearchSubmit {
+				width: 145px /* width of button image */;
+				height: 53px /* height of button image */;
+				opacity: 0;
+				-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				filter: alpha(opacity=0);
+			}
+			
+			/* the form can now have a calendar icons that match the design */
+			#promoSearchForm a.imgCalendar {
+				background: transparent url(http://homewoodsuites.hilton.com/en/promotions/media/images/hx_awaw/hpaw-calendar.jpg) no-repeat top left;
+				display:block;
+			}
+			
+			#promoSearchForm img.imgCalendar {
+				opacity: 0;
+				filter: alpha(opacity=0);
+			}
+			
+			#promoSearchForm td td td td table td {
+				white-space:nowrap;
+			}
+			
+			@media screen and (-webkit-min-device-pixel-ratio:0) {
+				#promoSearchForm td td td td table {
+					top: 124px;
+				}
+				
+				.fsFormSearchButton {
+					top:250px;
+				}
+			}
+			
+			/* --- remove find property link--- */ 
+			#min-height td {
+				padding: 0 !important;
+			}
+			
+			a[href="#find"]{
+				display: none;
+			}
+			 
+			#ssdeals img {
+				border:0;
+			}
+			
+			#ssdeals .imgurl {
+				display:inline-block;
+			}
+			
+			#ssdeals .bold_text {
+				font-weight:bold;
+			}
+			
+			#ssdeals {
+				width: 975px;
+				font-family: arial,helvetica,sans-serif;
+			}
+			
+			#ssdeals .hws_main_content {
+				background: url(img/background.jpg) no-repeat;
+				height: 910px;
+				width: 915px;
+				position: relative;
+				padding:0 30px;
+			}
+			
+			#ssdeals .booking_widget {
+				padding: 35px 30px 0;
+				height: 363px;
+				width: 178px;
+				position: absolute;
+				top: 0;
+				left: 29px;
+			}
+			
+			#ssdeals .booking_widget .find_a_hotel {
+				margin-bottom: 10px;
+			}
+			
+			#ssdeals .booking_widget .book_now_button {
+				margin-top: 20px;
+			}
+			
+			#ssdeals .masthead {
+				
+			}
+			
+			#ssdeals .headline {
+				position: absolute;
+				bottom: 0px;
+				left: 15px;
+			}
+			
+			#ssdeals .body_content {
+				display:block;
+				border:1px solid #dadada;
+				border-style: solid none;
+				padding:5px 0 0 20px;
+				margin:5px 0 10px;
+			}
+			
+			#ssdeals .body_copy, #ssdeals .body_copy_disclaimer {
+				padding: 0;
+				font-size: 14px;
+				line-height: 20px;
+				color: #424242;
+			}
+			
+			#ssdeals .body_copy a {
+				color: #0294ab;
+				font-weight: bold;
+			}
+			
+			#ssdeals .body_copy_disclaimer {
+				font-size:12px;
+				font-style: italic;
+			}
+			
+			#ssdeals .hhonors_content {
+				width: 319px;
+				float: left;
+				text-align: center;
+			}
+			
+			#ssdeals .hhonors_header {
+				margin: 10px 0;
+			}
+			
+			#ssdeals .hhonors_divider {
+				float: left;
+			}
+			
+			#ssdeals .sign_up_button, #ssdeals .sign_in_button {
+				height: 19px;
+				width: 68px;
+				margin: 15px 125px;
+			}
+			
+			#ssdeals .sign_up_button {
+				background: url(http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/sign_up_cta.png) no-repeat;
+			}
+			
+			#ssdeals .sign_in_button {
+				background: url(http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/sign_in_cta.png) no-repeat;
+			}
+			
+			#ssdeals .sign_up_button:hover, #ssdeals .sign_in_button:hover {
+				background-position: bottom left;
+			}
+			
+			#ssdeals .learn_more_cta {
+				background: url(http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/learn_more_cta.png) no-repeat;
+				height: 19px;
+				width: 92px;
+			}
+			
+			#ssdeals .learn_more_cta:hover {
+				background-position:0 -19px;
+			}
+			
+			#ssdeals .jdpower_award {
+				position: absolute;
+				bottom: 38px;
+				left: 62px;
+			}
+			
+			#ssdeals .jdpower_award_text {
+				position: absolute;
+				bottom: 60px;
+				left: 146px;
+			}
+			
+			#ssdeals .jdp_learn_more {
+				margin-top: 6px;
+			}
+			
+			#ssdeals .hws_cta_text {
+				background: url(http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/hws_cta_text.png) no-repeat;
+				height: 19px;
+				width: 251px;
+				position: absolute;
+				bottom: 60px;
+				right: 65px;
+			}
+			
+			#ssdeals .hws_cta_text:hover {
+				background-position: 0 -19px;
+			}
+			
+			#ssdeals .hws_main_content .hhonors_logo {
+				position: absolute;
+				top: 20px;
+				right: 50px;
+				z-index: 2;
+			}
+			 
+			#ssdeals .disclaimer {
+				margin: 0 30px 20px;
+				text-align: left;
+				font-size: 10px;
+				color: #75767a;
+			}
+			#ssdeals .disclaimer a{
+				color:#006666;
+				}
+			#ssdeals .mod-container {
+					overflow:hidden;
+				}
+			#ssdeals .module {
+					float:left;
+					margin-right:14px;
+					width:295px;
+				}
+			#ssdeals .lastchild { margin-right:0; float:right;}		
+			#ssdeals .module .mod-text {
+					font-size:12px;
+					margin-left:20px;					
+				}
+			#ssdeals .module .mod-text img {
+					margin-left:20px;
+				}
+			#ssdeals .module .mod-text p {
+					margin:5px 0;					
+				}	
+			#ssdeals .module .mod-text a{
+					font-size:10px;			
+					color:#3a807b;	
+				}	
+			#ssdeals .module .mod-text h1{
+					margin:5px 0 0;
+					padding:0;
+					font-size:12px;
+					font-weight:normal;
+					text-transform:uppercase;
+				}	
+			
+			
+		</style>
+<div id="ssdeals">
+  <div class="hws_main_content">
+    <div class="masthead"> <img src="img/masthead.jpg" width="916" height="398" alt="Everything you need for a suite summer" /> </div>
+    <div class="body_content">
+      <div class="body_copy"> <img src="img/headline.jpg" width="294" height="30" border="0" alt="Choose from these special offer" /> </div>
+    </div>
+    <div class="mod-container"><div class="module">
+      <div><img src="img/ggaway-thumb.jpg" /></div>
+      <div class="mod-text">
+        <h1>The Great Greataway <img src="img/arrow.jpg" align="texttop" /></h1>
+        <p>Save 15% on a suite this summer</p>
+        <a href="#">BOOK NOW!</a></div>
+    </div>
+    <div class="module">
+      <div><img src="img/aaa-thumb.jpg" /></div>
+      <div class="mod-text">
+        <h1>aaa & caa member savings <img src="img/arrow.jpg" align="texttop" /></h1>
+        <p>Members save 10% off our best available rates</p>
+        <a href="#">BOOK NOW!</a></div>
+    </div>
+    <div class="module lastchild right">
+      <div><img src="img/aarp.jpg" /></div>
+      <div class="mod-text">
+        <h1>special offer for AARP members<img src="img/arrow.jpg" align="texttop" /></h1>
+        <p>Save up to 10% with your AARP membership</p>
+        <a href="#">BOOK NOW!</a></div>
+    </div></div>
+  </div>
+</div>
+<img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/book_now_button.png" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/background.jpg" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/masthead.jpg" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/sign_in_cta.png" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/learn_more_cta.png" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/hws_cta_text.png" height="1" width="1" ><img src="http://homewoodsuites.hilton.com/en/promotions/media/images/homewoodq1/sign_up_cta.png" height="1" width="1" >
+</body>
+</html>

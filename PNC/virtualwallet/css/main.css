@@ -1,0 +1,1037 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@font-face {
+    font-family: 'pnc_sansbold';
+    src: url('../font/pnc_sansbol-webfont.eot');
+    src: url('../font/pnc_sansbol-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/pnc_sansbol-webfont.woff') format('woff'),
+         url('../font/pnc_sansbol-webfont.ttf') format('truetype'),
+         url('../font/pnc_sansbol-webfont.svg#pnc_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'pnc_sansregular';
+    src: url('../font/pnc_sansreg-webfont.eot');
+    src: url('../font/pnc_sansreg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/pnc_sansreg-webfont.woff') format('woff'),
+         url('../font/pnc_sansreg-webfont.ttf') format('truetype'),
+         url('../font/pnc_sansreg-webfont.svg#pnc_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a
+{
+    color:#f05a28;
+    text-decoration:none;
+}
+
+#container
+{
+    margin:30px auto;
+    width:732px;
+}
+
+header
+{
+    background:#FFF;
+    margin:0 0 2em;
+    overflow:hidden;
+}
+
+header h1
+{
+    background:url(../img/pnc_vw_logo.png) no-repeat;
+    display:block;
+    float:left;
+    height:32px;
+    margin:0 0 0 45px;
+    overflow:hidden;
+    text-indent:100%;
+    white-space:nowrap;
+    width:150px;
+}
+
+#cta
+{
+    border-bottom:1px solid #c9c9c9;
+    margin:0 auto;
+    padding-bottom:.5em;
+    text-align:center;
+    width:85%;
+}
+
+#cta h1
+{
+    color:#58595b;
+    font-family:pnc_sansbold, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size:2em;
+    line-height:0.8;
+    margin:0;
+    padding:0;
+    text-transform:uppercase;
+    font-weight: normal;
+}
+
+#cta h2
+{
+    color:#f6921e;
+    font-family:pnc_sansbold, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size:2.7em;
+    line-height:1.3;
+    margin:0;
+    padding:0;
+    text-transform:uppercase;
+    font-weight: normal;
+}
+
+#cta sup
+{
+    font-size:0.6em;
+}
+
+#cta h3
+{
+    color:#929497;
+    font-family:pnc_sansbold, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size:1em;
+    margin:0;
+    padding:0;
+    font-weight: normal;
+}
+
+#intro
+{
+    font-family:pnc_sansregular, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    overflow:hidden;
+}
+
+.lt-ie9 #intro{
+	height:80px;
+}
+
+
+#intro p
+{
+    display:block;
+    float:left;
+    font-size:.7em;
+    margin-left:8em;
+    width:45em;
+    margin-bottom:2em;
+}
+
+#intro img
+{
+    display:block;
+    float:left;
+    margin:1em 0 0 1em;
+}
+
+#carousel
+{
+    background:url(../img/pnc_vw_footer.png) bottom no-repeat;
+    margin:0 auto 0;
+    min-height:404px;
+    overflow:hidden;
+    position:relative;
+}
+
+    #carousel #dragMe {
+        background:url(../img/pnc_vw_drag.png) no-repeat;
+        width:45px;
+        height:25px;
+        position:absolute;
+        top: 70px;
+        left: 165px;
+        overflow:hidden;
+        text-indent:100%;
+        white-space:nowrap;
+        z-index:999999;
+    }
+
+#carouselFooter
+{
+    color:#fff;
+    font-family:pnc_sansbold, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size:0.8em;
+    left:80px;
+    position:absolute;
+    top:370px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 2px #a0310b;
+}
+
+#carousel #compareButton
+{
+    background:url(../img/pnc_vw_comparebutton.png) no-repeat;
+    cursor:pointer;
+    display:block;
+    height:18px;
+    overflow:hidden;
+    position:absolute;
+    right:40px;
+    text-indent:100%;
+    top:370px;
+    white-space:nowrap;
+    width:94px;
+}
+
+#seeMore
+{
+    background:url(../img/pnc_vw_seemore.png) no-repeat 0 50%;
+    color:#6d6e70;
+    display:block;
+    float:right;
+    font-family:pnc_sansregular, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size:.7em;
+    margin-top:5px;
+    margin-right:50px;
+    padding-left:1.7em;
+    text-transform:uppercase;
+}
+
+#howTo
+{
+    clear:both;
+    overflow:hidden;
+    position:relative;
+    width: 630px;
+    margin: 0 auto;
+}
+
+#howTo #headline
+{
+    background:url(../img/pnc_vw_divider_headline.png) 50% 60% repeat-x;
+    text-align:center;
+}
+
+#howTo #headline h2
+{
+    background:#fff;
+    color:#6d6e70;
+    display:block;
+    font-family:pnc_sansregular, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:400;
+    margin:0 auto;
+    width:325px;
+}
+
+#howTo #headline h2 strong
+{
+    font-family:pnc_sansbold, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-weight: normal;
+}
+
+#howTo #features
+{
+    font-family:pnc_sansregular, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size:.7em;
+    padding-bottom:2em;
+    text-align:center;
+}
+
+#howTo #colA
+{
+    float:left;
+    overflow:hidden;
+    width:300px;
+}
+
+#howTo #colA img
+{
+    float:right;
+}
+
+#howTo #colB
+{
+    float:right;
+    overflow:hidden;
+    width:325px;
+    margin-left:5px;
+}
+
+#howTo #colB img
+{
+    float:left;
+    margin-left:30px;
+}
+
+#howTo #arrowRight
+{
+    background:url(../img/pnc_vw_arrow_right.png) right no-repeat;
+    color:#777;
+    float:left;
+    font-family:pnc_sansbold, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size:1.1em;
+    line-height:1.2;
+    min-height:82px;
+    text-transform:uppercase;
+    width:110px;
+    font-weight: normal;
+    text-align: right;
+    padding-right: 70px;
+    margin-top: 5px;
+    padding-top: 15px;
+}
+
+#howTo #arrowLeft
+{
+    background:url(../img/pnc_vw_arrow_left.png) left no-repeat;
+    color:#777;
+    float:right;
+    font-family:pnc_sansbold, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size:1.1em;
+    line-height:1.2;
+    min-height:82px;
+    padding-left:75px;
+    text-transform:uppercase;
+    width:110px;
+    font-weight: normal;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+#howTo #colOr
+{
+    font-family:pnc_sansregular, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size:0.8em;
+    left:310px;
+    position:absolute;
+    top: 125px;
+    width:50px;
+    color:#6D6E70;
+}
+
+#howTo #divider
+{
+    background:url(../img/pnc_vw_divider_footer.png) center no-repeat;
+    height:3px;
+    position:absolute;
+    text-indent:100%;
+    top:200px;
+    white-space:nowrap;
+    display: block;
+    width: 100%;
+}
+
+footer
+{
+    color:#404041;
+    font-size:.7em;
+    margin-top:-20px;
+    margin-left: 50px;
+margin-right: 50px;
+}
+
+footer .footerNav {
+    text-transform: uppercase;
+    width:700px;
+    margin:20px 0 20px 45px;
+    font-size:1.2em;
+}
+
+footer p {
+    text-align: justify
+}
+.sliderGallery
+{
+    height:348px;
+    margin:0;
+    overflow:hidden;
+    position:relative;
+    width:737px;
+}
+
+.sliderGallery ul
+{
+    list-style:none;
+    margin:0;
+    overflow:none;
+    padding:0;
+    position:absolute;
+    top:63px;
+    white-space:nowrap;
+	float:left;
+	width:4500px;
+	z-index:1;
+}
+
+.sliderGallery ul li
+{
+    border-left:3px solid #2e2b2c;
+    border-right:3px solid #2e2b2c;
+    display:inline-block;
+    margin-left:49px;
+    margin-right:60px;
+    -webkit-box-shadow: 3px 3px 10px #555, -3px 3px 10px #555;   
+    -moz-box-shadow: 3px 3px 10px #555, -3px 3px 10px #555; 
+    box-shadow: 3px 3px 10px #555, -3px 3px 10px #555;
+	float:left;
+    background:#fff;
+}
+
+
+.sliderBG
+{
+    background:url(../img/pnc_vw_nav.png) no-repeat 0 6px;
+    position:relative;
+    height:100px;
+}
+
+.lt-ie9 .sliderBG{
+    background:url(../img/pnc_vw_nav_ie7.png) no-repeat 0 6px;
+	position:absolute;
+	width:730px;
+	z-index:10000
+}
+
+.slider
+{
+
+    height:87px;
+    margin:0 0 0 47px;
+    padding:0;
+    position: relative;
+    width:636px;
+	background:none;
+	border:none;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+margin-left: 40px;
+width: 90px;
+height:200px
+}
+
+.slider div
+{
+    cursor:pointer;
+    font-size:0.7em;
+    position:absolute;
+    margin:0;
+    display:block;
+    text-align: center;
+    font-family:pnc_sansbold, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-weight: normal;
+    text-shadow: 1px 2px 2px #000;
+    width:100px;
+    padding:0 0 30px 0;
+}
+
+.slider .slider-lbl1
+{
+    top:25px;
+    left:5px;
+    color:#fff;
+}
+
+.slider .slider-lbl2
+{
+    top:25px;
+    left:110px;
+    color:#fff;
+}
+
+.slider .slider-lbl3
+{
+    top:20px;
+    left:220px;
+    color:#fff;
+}
+
+.slider .slider-lbl4
+{
+    top:25px;
+    left:325px;
+    color:#fff;
+}
+
+.slider .slider-lbl5
+{
+    top:25px;
+    left:450px;
+    width:60px;
+    color:#fff;
+}
+
+.slider .slider-lbl6
+{
+    top:25px;
+    left:550px;
+     width:60px;
+     color:#fff;
+}
+
+.slider .ui-state-default
+{
+    background:url(../img/pnc_vw_active_bar.png) no-repeat;
+    border:0;
+    cursor: ew-resize;
+    height:105px;
+    width:120px;
+    z-index: 99999999;
+    display: block;
+    position: relative;
+    outline: 0;
+	border-radius:0;
+}
+
+.lt-ie9 .slider .ui-state-default{
+	z-index:99999;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+top: 0;
+margin-left:-49px;
+}
+
+.lt-ie9 .ui-slider-horizontal .ui-slider-handle {
+margin-left:-51px;
+}
+
+.activeSlide {
+    color:#f58a1f !important;
+}
+
+
+#dialog
+{
+    display:none;
+}
+
+#dialog p.instructions {
+    font-size:0.7em;
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+#dialog #tableContainer {
+    height:220px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin:1em 0 1.5em 20px;
+}
+
+#dialog #applyInstructionsContainer {
+    overflow: hidden;
+    clear:both;
+}
+
+#dialog #applyInstructionsContainer img {
+    display:block;
+    float:left;
+    margin-left:1em;
+    margin-right:1em;
+    width: auto;
+}
+
+#dialog #applyInstructions {
+    color:#777;
+    float:left;
+    font-family:pnc_sansbold, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size:0.8em;
+    line-height:1.2;    
+    width:450px;
+    font-weight: normal;
+    margin-top:5px;
+}
+
+#dialog #applyInstructions span {
+    color:#F6921E;
+    font-size:1.7em;
+}
+
+#simplemodal-container
+{
+    -moz-border-radius:10px;
+    -moz-box-shadow:2px 2px 10px 3px #999;
+    -webkit-border-radius:10px;
+    -webkit-box-shadow:2px 2px 10px 3px #999;
+    background-color:#fff;
+    border:4px solid #8ac53e;
+    border-radius:10px;
+    box-shadow:2px 2px 10px 3px #999;
+    color:#6D6E70;
+    height:400px;
+    width:740px;
+    z-index: 9999999999 !important;
+}
+
+#simplemodal-container a.modalCloseImg
+{
+    background:url(../img/pnc_vw_close.png) no-repeat;
+    cursor:pointer;
+    display:inline;
+    height:29px;
+    position:absolute;
+    right:-16px;
+    top:-15px;
+    width:25px;
+    z-index:3200;
+}
+
+#simplemodal-container h3
+{
+    background:url(../img/pnc_vw_modal_header.png) no-repeat;
+    color:#fff;
+    display:block;
+    font-family:pnc_sansbold, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size:1.1em;
+    font-weight:400;
+    margin: 10px 0 0 10px;
+    padding:5px 0 15px;
+    text-align:center;
+    text-transform: uppercase;
+}
+
+#simplemodal-container h4
+{
+    color:#2d78af;
+    font-family:pnc_sansbold, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    font-size:1.3em;
+    font-weight:400;
+    margin:0;
+    line-height:1.2;
+    padding:0;
+    text-align:left;
+    font-weight: normal;
+}
+
+#simplemodal-container table
+{
+    border:0;
+    width:auto;
+    margin-top:1.5em;
+    width: 700px;
+}
+
+#simplemodal-container table th
+{
+    font-size:.7em;
+    font-weight:400;
+    padding: 10px 15px 5px 15px;
+}
+
+#simplemodal-container th,#simplemodal-container td
+{
+    font-size:.7em;
+}
+
+#simplemodal-container td,#simplemodal-container th,#simplemodal-container tr
+{
+    border:0;
+    text-align:left;
+}
+
+#simplemodal-container tr.stripe td, #simplemodal-container tr.stripe th 
+{
+    background:#eee;
+}
+
+#simplemodal-container td
+{
+    border-left:dashed 1px #ccc;
+    text-align:left;
+    padding: 5px 15px;
+    vertical-align: middle;
+    font-style: italic;
+}
+
+#simplemodal-container tbody
+{
+    border-left:none;
+    border-right:none;
+}
+
+#simplemodal-container col
+{
+    width:208px;
+}
+
+#simplemodal-container div#vwallet_disclosures
+{
+    background-color:#E1E1E1;
+    bottom:20px;
+    font-size:11px;
+    left:20px;
+    padding:10px;
+    position:absolute;
+    width:388px;
+}
+
+#simplemodal-container div#vwallet_disclosures p
+{
+    margin:0 0 5px;
+}
+
+#simplemodal-container colgroup.products col
+{
+    border-left:dashed 1px #ccc;
+    width:210px;
+}
+
+#simplemodal-container tr.titles td,#simplemodal-container tr.titles th
+{
+    color:#000;
+    font-size:0.8em;
+    font-weight:800;
+}
+
+#simplemodal-container tr th.products
+{
+    border-left:dashed 1px #ccc;
+    padding: 5px 15px;
+    vertical-align: top;
+}
+
+#simplemodal-container tfoot tr th
+{
+    font-weight:400;
+    text-align:left;
+}
+
+#simplemodal-container tfoot tr td
+{
+    color:#444;
+    font-size:12px;
+}
+
+#simplemodal-container h1
+{
+    color:#f58026;
+    font-size:18px;
+    font-weight:500;
+    height:25px;
+    line-height:18px;
+    margin:0 0 20px;
+}
+
+#simplemodal-container span.yes
+{
+    background:url(../img/pnc_vw_close_check.png) no-repeat;
+    display:inline-block;
+    height:18px;
+    overflow:hidden;
+    text-indent:100%;
+    white-space:nowrap;
+    width:23px;
+    float:left;
+}
+
+#simplemodal-container span.no
+{
+    background:url(../img/pnc_vw_close_x.png) no-repeat;
+    display:inline-block;
+    height:18px;
+    overflow:hidden;
+    text-indent:100%;
+    white-space:nowrap;
+    width:23px;
+    float:left;
+}
+
+#simplemodal-container .disclaimer {
+    font-size:0.6em;
+    margin-right:20px;
+}
+
+.lt-ie8 object {display:block;width:630px !important;height:290px !important; background: #000}
+.lt-ie8 .sliderGallery ul li {display: block;float:left;width:630px;}
+
+.video-js, video {background-color: #000 !important; display: block;}
+.video-js {margin: 0 auto 20px;}
+.video-js-fullscreen, .video-js-fullscreen video {background-color: #000 !important;}
+.vjs-poster {width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.vjs-default-skin div.vjs-big-play-button {background: url(../img/icons_mobile.png) -72px -33px no-repeat; cursor: pointer !important; display: block; height: 52px; width: 52px; position: absolute; z-index: 2; top: 50%; left: 50%; margin: -26px 0 0 -26px; text-align: center; border: 0; -o-box-shadow: none; -ms-box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; filter: none;}
+.vjs-default-skin div.vjs-big-play-button:hover {background-position: -125px -33px; -o-box-shadow: none; -ms-box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;}
+.vjs-default-skin div.vjs-big-play-button span {display: none}
+        
+​
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,89 @@
+/*!
+ * Bookingwidget Styles
+ */
+
+body.bw { background:transparent !important;}
+/* BOOKING WIDGET */
+#bookingwidget { background:url(../images/common/common-sprite-lg.png) 0 -545px no-repeat; width:980px; height:215px; }
+#bookingwidget .expedialogo {background:url(../images/common/common-sprite-sm.png) 0 -1541px no-repeat; width: 97px; height:31px;display:block; overflow:hidden;}
+#bookingwidget .book-container { padding:20px 0px 20px 60px	; }
+#bookingwidget .book-container a.bermuda-logo { background:url(../images/common/common-sprite-sm.png) 0 -713px no-repeat; display:block; overflow:hidden; height:51px; width:210px; text-indent:-5000px; margin:-2px 0 10px 0; }
+#bookingwidget .book-container .bookdesc { width:260px; }
+#bookingwidget .book-container .bookdesc p { margin-bottom:10px; }
+#bookingwidget .folder-container {margin:0 0 0 26px;}
+#bookingwidget ul.tabs { margin: 0; padding: 0; float: left; list-style: none; height: 32px; width: 599px; background:url(../images/common/common-sprite-lg.png) -8px -838px no-repeat;}
+#bookingwidget ul.tabs li {float: left; margin: 0; padding: 0; height: 32px; line-height: 32px; margin-bottom: -1px; overflow: hidden;  }
+#bookingwidget ul.tabs li a { text-indent:-5000px; height: 32px; text-decoration: none; color: #000; display: block; outline: none; background:url(../images/common/common-sprite-lg.png) no-repeat;  }
+#bookingwidget ul.tabs li.vacpack a { background-position: -1px -769px; width:143px;}
+#bookingwidget ul.tabs li.holidaypack a { background-position: -1px -1882px; width:143px;}
+#bookingwidget ul.tabs li.air a { background-position: -144px -769px; width:89px;}
+#bookingwidget ul.tabs li.acommodation  a {background-position: -233px -769px; width:105px;}
+#bookingwidget ul.tabs li.cruises a { background-position: -338px -769px; width:94px;}
+#bookingwidget ul.tabs li.vacpack a:hover, html #bookingwidget ul.tabs li.active a.vacpack, html #bookingwidget ul.tabs li.active a.vacpack:hover { background-position: -1px -802px; }
+#bookingwidget ul.tabs li.holidaypack a:hover, html #bookingwidget ul.tabs li.active a.holidaypack, html #bookingwidget ul.tabs li.active a.holidaypack:hover { background-position: -1px -1915px; }
+#bookingwidget ul.tabs li.air a:hover, html #bookingwidget ul.tabs li.active a.air, html #bookingwidget ul.tabs li.active a.air:hover  { background-position: -144px -802px; }
+#bookingwidget ul.tabs li.acommodation a:hover, html #bookingwidget ul.tabs li.active a.acommodation, html #bookingwidget ul.tabs li.active a.acommodation:hover { background-position: -233px  -802px; }
+#bookingwidget ul.tabs li.cruises a:hover, html #bookingwidget ul.tabs li.active a.cruises, html #bookingwidget ul.tabs li.active a.cruises:hover { background-position: -339px -802px; }
+#bookingwidget .tab-container { overflow: hidden; clear: both; width: 599px;  background: url(../images/common/common-sprite-lg.png) 0 -886px no-repeat; height:132px;  }
+#bookingwidget .tab-content { padding: 10px 20px; }
+#bookingwidget .tab-container-bot { background:url(../images/common/booking-widget/tabcontainer-bot.png) no-repeat; width:599px; height:12px;}
+#bookingwidget h2 {background:url(../images/common/common-sprite-sm.png) no-repeat; width:231px; height:25px; display:block; text-indent:-5000px; overflow:hidden; margin:0 0 5px;}
+#bookingwidget #pac h2 {background-position:0 -1742px;}
+#bookingwidget #pac h2.holidaypack {background-position:-309px -1742px;}
+#bookingwidget #flt h2 {background-position:0 -1683px;}
+#bookingwidget #hot h2 {background-position:0 -1653px;}
+#bookingwidget #tsh h2 {background-position:0 -1713px;}
+#bookingwidget #searchWiz { font-size:10px; text-align:left;/*padding:3px; margin:7px 0 10px 5px;*/ }
+#bookingwidget #searchWiz img { border:none;}
+#bookingwidget #searchWiz h4 { font-size:11px; margin:5px 0 0; padding:0; float:left; font-weight:bold; }
+#bookingwidget #searchWiz table { width:100%; }
+#bookingwidget #searchWiz form { margin:0; }
+#bookingwidget #searchWiz td, #bookingwidget #searchWiz input, #bookingwidget #searchWiz select { font-size:10px; font-family:arial; padding:0; }
+#bookingwidget #searchWiz th { font-size:11px; font-family:arial; }
+/*#bookingwidget #searchWiz img { border:none; margin-bottom:-5px; }*/
+#bookingwidget #searchWiz #bookingwidget #searchWiz th { vertical-align:top; text-align:left; font-weight:normal; padding:3px 0; }
+#bookingwidget #searchWiz ul { margin:0; padding:5px 0 0 0; list-style-type:none; }
+#bookingwidget #searchWiz ul label { float:none; font-weight:bold; margin:0; padding:0; width:auto; }
+#bookingwidget #searchWiz ul input { border:1px solid #000; width:124px; font-size:10px; font-family:arial; overflow:auto; padding:3px; }
+#bookingwidget #searchWiz li { display:inline; padding:0; margin:0 5px; }
+#bookingwidget #searchWiz #car label { width:auto; }
+#bookingwidget #searchWiz label { font-size: 11px; color: #000; font-weight:bold; font-family: arial, verdana; display:block; margin-top:4px; }
+#bookingwidget #searchWiz input.standard { font-size: 10px; WIDTH: 180px; font-family: arial, verdana }
+#bookingwidget #searchWiz input.date { font-size: 10px; WIDTH: 52px; font-family: arial, verdana }
+#bookingwidget #searchWiz select.standard { font-size: 10px; WIDTH: 124px; font-family: arial, verdana }
+#bookingwidget #searchWiz select.time { font-size: 10px; WIDTH: 68px; font-family: arial, verdana }
+#bookingwidget #searchWiz a { font-size: 11px; color: #666666; font-family: arial, verdana; FONT-WEIGHT: bold; color: #0d5b92; }
+#bookingwidget #searchWiz .bgcolor { background:url(http://www.bermudatourism.com/assets/img/controls/bookingwidget/bw-expanded-new.gif) 0 0 no-repeat; height:24px; /*background-color:#e06a8f; border-bottom:1px solid #e06a8f;*/
+font:bold 11px Arial; color:#Ffffff }
+#page td, #page th { font-size: 11px; }
+#bookingwidget #searchWiz .litebgcolor { background:url(http://www.bermudatourism.com/assets/img/controls/bookingwidget/bw-collapsed-new.gif) 0 0 no-repeat; height:24px; font:bold 11px Arial; color:#000000; cursor: hand }
+#bookingwidget #searchWiz .menuText { font:bold 11px Arial; text-align:left; padding:0 10px; }
+#bookingwidget #searchWiz .GoButton { background: url(../images/common/common-sprite-sm.png) 0 -1182px no-repeat; display:block; overflow:hidden; text-indent:-5000px; height:23px; width:61px; border:none; float:left; cursor:pointer; }
+#bookingwidget #searchWiz input.GoButton { margin:10px 0 10px 10px; text-indent:-5000px; }
+#r1, #r2, #r3, #r5, .noborder { border:none; margin-right:5px; }
+#bookingwidget #searchWiz .numppl div { margin-left:15px;}
+#bookingwidget #searchWiz .numppl div select { width: 50px; padding:1px 0;}
+#bookingwidget #searchWiz #pac img {display:block;}
+#bookingwidget #searchWiz #pac .departret {margin: 0 28px 0 20px;}
+#bookingwidget #searchWiz #pac .departfrom {margin-top:40px;}
+#bookingwidget #searchWiz #pac input.GoButton, #bookingwidget #searchWiz #flt input.GoButton  { margin:14px 0 0 135px;}
+#bookingwidget #searchWiz #flt .radiobutton { margin:5px 5px 0 0; }
+*+html #bookingwidget #searchWiz #flt .radiobutton { margin:0; }
+#bookingwidget #searchWiz #flt .departret {margin: 0 10px; }
+#bookingwidget #searchWiz .typeflight label {margin:2px 5px 0 0; font-weight:normal;}
+#bookingwidget #searchWiz #hot .roomTitle { vertical-align:bottom; margin-top:2px; }
+#bookingwidget #searchWiz #hot #hotrm1, #bookingwidget #searchWiz #hot #hotrm2, #bookingwidget #searchWiz #hot #hotrm3 { padding:2px 0 6px;clear:both; width:182px;}
+#bookingwidget #searchWiz #hot .labels {padding:0 0 0 55px;} 
+#bookingwidget #searchWiz #hot .labels label {float:left; margin:0 12px 0 15px;}
+#bookingwidget #searchWiz #hot .numppl { margin: -25px 0 0 20px; width:270px}
+#bookingwidget #searchWiz #hot .mid { margin: 10px 20px 2px 0;}
+#bookingwidget #searchWiz #hot .numofrooms { margin:0 10px 0 0 ;}
+#bookingwidget #searchWiz #hot input.GoButton { margin:-28px 0 0 10px;text-indent:-5000px; float:right; }
+#tab3 img { margin: 0 0 10px 0;}
+#bookingwidget #searchWiz a.btn-calendar { background:url(../images/common/common-sprite-sm.png) 0 -1442px no-repeat; width:23px; height:21px; display:block; overflow:hidden; text-indent:-5000px; float:left; margin:0 0 0 5px;}
+#bookingwidget .tab-cruises-content { clear:both;left:20px; top:50px; }
+#bookingwidget .tab-cruises-content div { margin-right:20px }
+#bookingwidget .tab-cruises-content p { font:normal 12px/14px arial !important; }
+#bookingwidget .tab-cruises-content a { font:normal 12px/14px arial !important; color:#DE2853 !important; }
+#bookingwidget .tab-cruises-content a.GoCruiseBtn { display:block; height:23px; width:154px; border:none; margin:14px 0 0 200px; background:url(../images/common/common-sprite-sm.png) 0 -989px no-repeat; text-indent:-5000px; }
+#tab4 img { margin: 0 0 20px 0;}

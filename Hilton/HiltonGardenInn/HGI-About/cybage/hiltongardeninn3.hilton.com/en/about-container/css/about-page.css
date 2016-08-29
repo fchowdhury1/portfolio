@@ -1,0 +1,162 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #7D7D7D;
+	min-width: 990px;
+	/*background: url('../img/body_bg.gif') 0px -1px repeat;
+	background-color: #e7e5e4;*/
+}
+#body_wrapper {
+	padding: 0 0 0 0;
+	margin: 10px auto 10px auto;
+	width: 705px;
+	/*-moz-box-shadow: 0 0 7px #666666;
+	-webkit-box-shadow: 0 0 7px #666666;
+	box-shadow: 0 0 7px #666666;
+	behavior: url(/skins/common/js/PIE.htc);*/
+}
+#main_content {
+	background-color: #fff;
+	margin: 0;
+	width: auto;
+	min-height: 300px;
+}
+.two_column {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+.content {
+	margin: 0 auto;/*position: relative;*/
+}
+#main_content .content {
+	padding: 25px 20px 25px 20px;
+}
+.right_column {
+	float: right;
+	width: 705px;
+	margin-left: 30px;
+}
+p, h1, h2, h3, h4, h5, h6 {
+	margin:0;
+	padding:0
+}
+
+/********************************************************************************
+ABOUT US PAGE CSS START HERE
+********************************************************************************/
+.ls-area-right-links {
+	width:138px;
+	float:right;
+}
+.ls-area-right-links a {
+	font:bold 12px 'HelveticaNeueW02-55Roman';
+	color:#B09152;
+	text-transform:uppercase;
+	display:block;
+	float:left;
+}
+.ls-area-right-links span {
+	font:bold 12px 'HelveticaNeueW02-55Roman';
+	color:#bbbaba;
+	text-transform:uppercase;
+	display:block;
+	float:left;
+}
+.ls-area-share-link {
+	padding-right:18px;
+	margin-right:10px;
+	background:url(../img/ls_right_small_icons.png) no-repeat right -37px;
+}
+.ls-area-print-link {
+	padding-right:18px;
+	margin-left:10px;
+	background:url(../img/ls_right_small_icons.png) no-repeat right 0;
+}
+.ls-right-area-body {
+	width:680px;
+	float:left;
+	margin:15px 0 0 0;
+}
+.ls-about-area {
+	width:100%;
+	overflow:hidden;
+	font:normal 14px Arial, Helvetica, sans-serif;
+	color:#7d7d7d;
+	line-height:20px;
+}
+.ls-about-image {
+	width:100%;
+	overflow:hidden;
+	margin-bottom:10px;
+}
+.ls-about-image-left {
+	width:464px;
+	float:left;
+	margin-right:5px;
+}
+.ls-about-image-right {
+	width:210px;
+	float:left;
+}
+.ls-image-right-small {
+	margin-bottom:6px
+}
+.ls-about-title {
+	font:normal 24px Georgia, "Times New Roman", serif;
+	color:#9f8b4f;
+	margin:0 0 10px 0;
+	text-transform:uppercase;
+}
+.ls-amenities-body {
+	width:100%;
+	margin-top:20px;
+}
+.ls-amenities-body h3 {
+	font:normal 24px Georgia, "Times New Roman", serif;
+	color:#9f8b4f;
+	margin:0 0 10px 0;
+	text-transform:uppercase;
+	border-bottom:1px solid #d2d2d2;
+	padding-bottom:15px;
+}
+.ls-amenities {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.ls-amenities td {
+	padding:15px 0;
+	border-bottom:1px solid #d2d2d2;
+	overflow:hidden;
+}
+.ls-amenities-content {
+	padding-left:20px;
+	border-left:1px solid #d2d2d2;
+}
+.ls-amenities-content h2 {
+	font:normal 16px 'HelveticaNeueW02-55Roman';
+	color:#9f8b4f;
+	margin:0 0 8px 0;
+	text-transform:uppercase;
+}
+.ls-amenities-points {
+	list-style:none;
+	margin:0;
+	padding:0
+}
+.ls-amenities-points li {
+	margin-bottom:5px;
+	font:normal 13px Arial, Helvetica, sans-serif;
+	color:#7d7d7d;
+	background:url(../img/amenities-bullets.png) no-repeat 0 6px;
+	padding-left:6px;
+}
+.ls-amenities-points li a {
+	color:#96443a;
+	font-weight:bold;
+	text-decoration:underline
+}
+.note-text {
+	font-size:10px;
+	color:#9f8b4f
+}

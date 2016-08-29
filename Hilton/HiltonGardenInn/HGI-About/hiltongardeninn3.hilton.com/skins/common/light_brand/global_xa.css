@@ -1,0 +1,1061 @@
+#utility_links_list, #user_nav
+{
+	visibility: hidden;	
+}
+.jsDisabled #utility_links_list, .jsDisabled #user_nav
+{
+	visibility:visible;
+}
+#my_reservations_in
+{
+	visibility: hidden;	
+}
+.jsDisabled #my_reservations
+{
+	visibility: visible;	
+}
+#global_header_wrapper, #footer_wrapper
+{
+	font-family: Arial, Helevetica, Sans-Serif;
+	font-size: 11px;
+}
+#global_header_wrapper a, #footer_wrapper a
+{
+	text-decoration: none;
+	color: #888;
+}
+#hhonors_logo_link
+{
+	display: inline-block;
+	float: left;	
+}
+#global_header_wrapper a:hover, #footer_wrapper a:hover, #footer_wrapper a:focus, #footer_wrapper .footer_links_list a:focus div /* :focus and :focus div for 18484 */
+{
+	color: #565354;
+}
+a.arrow_link
+{
+	background: url('img/link_arrow.gif') 100% 0 no-repeat;
+	padding-right: 7px;
+	font-size: 10px;
+}
+a.arrow_link:hover
+{
+	background-position: 100% -11px; 
+	color: #888;
+}
+.text_input_bg
+{
+	background: #ffffff;
+	border: solid 1px #dbdcdc;
+	height: 20px;
+	display: block;
+	margin-right: 8px;
+	position: relative;
+	
+	-moz-box-shadow: 0 0 2px #dbdcdc;
+	-webkit-box-shadow: 0 0 2px #dbdcdc;
+	box-shadow: 0 0 2px #dbdcdc;
+	
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-box-shadow: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	
+	behavior: url(/skins/common/js/PIE.htc);	
+}
+
+.text_input_bg input
+{
+	background: transparent url(/skins/common/img/null.gif); /* ORG - CR 17145 */
+	border: none;
+	margin: 0;
+	padding: 3px 7px;
+    width: 135px;
+	zoom: 1;
+}
+#my_reservation_panel .text_input_bg input
+{
+	width: 100px;
+}
+#loader_container
+{
+	width: 970px;
+	margin: 0 auto;	
+	display: none;
+}
+.spinner
+{
+	width: 16px;
+	height: 16px;
+	background: url('img/spinner.gif') 0 0 no-repeat;
+	display: block;
+    position: absolute;
+    margin: 8px;
+}
+/****************
+* Global Header XA
+****************/
+#global_header_wrapper
+{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 200;
+	line-height: 1.2;
+	height: 0;	
+}
+.header_row
+{
+	border-bottom: solid 1px #d1cfcf;
+	background-color: #eaebec;
+	position: relative;
+	z-index: 5;
+	min-width: 972px;
+}
+
+/****************
+* top row
+****************/
+.header_content_container
+{
+	width: 970px;
+	height: 29px;
+	margin: 0 auto;
+	border-left: solid 1px #d1cfcf;
+	border-right: solid 1px #d1cfcf;
+	color: #747474;
+	background-color: #EAEBEC;
+}
+
+* html .header_content_container
+{
+	height: auto;
+	padding-bottom: 3px;
+	
+}
+#global_header_wrapper a
+{
+	color: #bc9d5f;	
+}
+
+#global_header_wrapper a:hover
+{
+	color: #565354;	
+}
+
+#global_header_wrapper .custom_button
+{
+	
+	color:#fff;
+	padding: 0 5px 0 10px;
+	height: 20px;
+	margin-right: 8px;
+	line-height: 18px;
+	font-size: 11px;
+	font-weight: bold;
+	cursor: pointer;
+	white-space: nowrap;
+	position: relative;
+	
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background: #747474;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#747474), to(#474747));
+	background: -moz-linear-gradient(#747474, #474747);
+	background: linear-gradient(#747474, #474747);
+	
+	/* needs to be absolute path */
+	-pie-background: linear-gradient(#747474, #474747);
+	
+	behavior: url(/skins/common/js/PIE.htc);	
+}
+
+.custom_button .text
+{
+	float: left;
+}
+
+.custom_button .arrow_icon
+{
+	background: url('img/button_arrow.png') no-repeat;
+	width: 8px;
+	height: 8px;
+	display: block;
+	float: left;
+	margin: 6px 0 0 10px;
+}
+
+#global_header_wrapper .custom_button:hover
+{
+	
+	color:#fff;
+
+	
+	background:  #333;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#747474), to(#000000));
+	background: -moz-linear-gradient(#747474, #000000);
+	background: linear-gradient(#747474, #000000);
+	
+	/* needs to be absolute path */
+	-pie-background:  linear-gradient(#747474, #000000);
+	
+	behavior: url(/skins/common/js/PIE.htc);	
+}
+#utility_links_list
+{
+	padding: 8px 0 0;
+	margin: 0;
+	list-style: none; 
+	float: left;
+}
+#utility_links_list li
+{
+	padding: 0 8px;
+	margin: 0;
+	display: inline;
+	font-size: 11px;
+}
+
+#utility_links_list #my_reservations.selected
+{
+	border-right: solid 1px #d1cfcf;
+	border-bottom: solid 1px #eaebec;
+	float: left;
+	margin-top: -8px;
+	padding: 8px 11px 8px 8px;
+}
+
+#utility_links_list #sign_up_for_promotions
+{
+	border-left: solid 1px #d1cfcf;
+	visibility: hidden;
+}
+#dock_right_items_container
+{
+	float: right;	
+}
+#user_nav
+{
+	float: left;
+	padding: 8px 0 0;
+}
+.logged_out #user_nav .logged_out_view
+{
+	display: block;
+}
+.logged_out #user_nav .logged_in_view
+{
+	display: none;
+}
+.logged_in #user_nav .logged_out_view
+{
+	display: none;
+}
+.logged_in #user_nav .logged_in_view
+{
+	display: block;
+}
+#user_nav #sign_in, #user_nav #welcome
+{
+	border-right: solid 1px #d1cfcf;
+	padding-right: 8px;	
+	margin-right: 6px;
+}
+#user_nav #welcome, #user_nav .point_status, #user_nav #my_account, #user_nav #sign_out { display: inline; } /* ORG - CR #17741 */
+#user_nav #sign_in.selected
+{
+	border-left: solid 1px #d1cfcf;
+	border-right: solid 1px #d1cfcf;
+	border-bottom: solid 1px #EAEBEC;
+	float: left;
+	margin-top: -8px;
+	padding: 8px 11px 8px 8px;
+}
+#user_nav #explore_benefits, #user_nav #sign_out
+{
+	margin: 0 8px 0 0;
+}
+#user_nav #sign_out
+{
+	
+}
+#user_nav .point_status, #user_nav .not_member, #user_nav #my_account
+{
+	margin-right: 5px;
+}
+#user_nav .point_status, #user_nav #my_account
+{
+	border-right: 1px solid #d1cfcf;
+	padding-right: 8px;
+}
+#hhonors_dock_logo
+{
+	float: left;
+	border-left: solid 1px #d1cfcf;
+	display: block;
+}
+#dock_right_items_container #dock_control
+{
+	float: left;
+}
+#dock_control
+{
+	float: left;
+	height: 29px;
+	display: block;
+	cursor: pointer;
+	background: url('img/dock_icon_arrow_down.gif') 0 -29px no-repeat;
+	border-left: solid 1px #d1cfcf;
+	width: 18px;
+}
+#dock_control.opened
+{
+	background: url('img/dock_icon_arrow_up.gif') 0 -29px no-repeat;
+}
+#dock_control:hover
+{
+	background-position: 0 0;
+}
+
+#expanded_area
+{
+	position: relative;
+	top: -30px;	
+	z-index: 3;
+}
+
+#expanded_area .header_content_container
+{
+	border-left: none;
+	border-right: none;
+}
+
+/****************
+* login form row
+****************/
+#login_view
+{
+	display: none;	
+}
+
+#login_form
+{
+	float: right;
+	margin-top: 4px;
+	line-height: 19px;
+}
+#login_form label
+{
+	float: left;	
+	margin-right: 8px;
+}
+
+#login_form .text_input_bg
+{
+	float: left;	
+}
+
+#chkRemember, #login_go
+{
+	float: left;	
+}
+#chkRemember
+{
+	vertical-align: center;
+}
+#login_form #remember_label
+{
+	color: #bc9d5f;
+	margin: 0 5px 0 4px;
+}
+#login_go
+{
+	
+}
+#forgot_password
+{
+	margin-right: 18px;
+	border-left: solid 1px #d1cfcf;
+	padding-left: 6px;
+}
+#account_view.header_content_container
+{
+	height: auto;
+	display: none;	
+}
+#login_error_view.header_content_container
+{
+	height: auto;
+	display: none;
+}
+.login_error_message
+{
+	padding: 8px;	
+	display: block;
+}
+
+/********
+* Login Fast Res View
+********/
+#my_reservation_panel
+{
+	height: auto;
+	display: none;
+}
+#my_reservation_panel form
+{
+	margin: 0;
+	padding: 0;
+}
+* html #my_res_login_form, * html #view_res_form
+{
+	width: 335px;
+}
+#my_res_login_form, #view_res_form, #existing_travel_links_container
+{
+	float: left;	
+	padding: 8px;	
+}
+.column_header
+{
+	font-weight: bold;
+}
+.stay_details
+{
+	padding-right: 8px;	
+}
+#my_res_login_form div, #view_res_form div
+{
+	margin-top: 6px;	
+}
+#my_reservation_panel label
+{
+	float: left;	
+	width: 120px;
+	text-align: right;
+	padding-right: 10px;
+}
+#view_res_form label
+{
+	width: 97px;
+}
+#my_reservation_panel .text_input_bg
+{
+	width: 115px;	
+	float: left;
+}
+#my_reservation_panel .custom_button
+{
+	float: left;
+}
+#existing_travel_links_container
+{
+	margin-left: 8px;	
+}
+#existing_travel_links_container ul
+{
+	margin: 0;
+	padding: 2px 0 0 0;
+	list-style: none;
+}
+#existing_travel_links_container li
+{
+	margin-top: 4px;	
+}
+
+/****************
+* login view
+****************/
+.account_container
+{
+	float: left;
+	padding: 8px 0 8px 8px;
+	line-height: 15px;
+	width: 310px;	
+}
+.manage_link_list
+{
+	margin: 5px 0 0 0;
+	padding: 0;
+	list-style: none;	
+	line-height: 9px;
+}
+.manage_link_list li
+{
+	float: left;
+	margin-right: 6px;
+	padding-right: 6px;
+	border-right: solid 1px #474746;
+}
+.manage_link_list li.last
+{
+	border-right: none;
+	margin-right: 0;	
+}
+.hhonors_copy
+{
+	float: left;
+	width: 192px;
+	margin-right: 6px;	
+}
+#join_hhonors_container
+{
+	display: none;	
+}
+#join_hhonors_button
+{
+	float: left;
+	margin-top: 20px;	
+}
+/****************
+* Progress Bar 
+****************/
+#account_view #my_account_progress .diamondCompleteUser img {
+	-moz-box-shadow: 3px 3px 10px #c4c4c4;
+	-webkit-box-shadow: 3px 3px 10px #c4c4c4;
+	box-shadow: 3px 3px 10px #c4c4c4;
+	behavior: url(/skins/common/js/PIE.htc);
+    border: 3px solid #FFFFFF;
+	width:150px;
+	margin:5px 10px 0 0;
+	padding:0px;
+}
+
+#my_account_progress {
+	float: left;
+	position:relative;
+	margin: 0px 0 0 0;
+	padding-bottom:20px;
+	width: 350px; /* width: 315px; 16441 */
+}
+.account_container { width:290px; }
+
+/* my account progress bar */
+#my_account_progress .bar_section { float: left; }
+#my_account_progress .progress_section { width:100%; }
+#my_account_progress .progress_bar, #my_account_progress .bar_section { height:18px; }
+#my_account_progress .blue, #my_account_progress .silver, #my_account_progress .gold, #my_account_progress .diamond {
+	background-image:url("/skins/en_US/HH/img/expand_tabbed_slider/bg_graph.png");
+	background-position:0 50%;
+}
+#my_account_progress .blue { background-color:#273B48; }
+#my_account_progress .silver { background-color:#8B8D80; }
+#my_account_progress .gold { background-color:#B48720; }
+#my_account_progress .diamond { background-color:#C3C4BE; }
+
+#my_account_progress .bar_section .label { 
+	color:#fff;
+	text-transform:uppercase;
+	font-size:9px;
+	margin:4px 0 0 4px; }
+#my_account_progress .current_progress { 
+	background: url('/skins/en_US/HH/img/my_account_info/progress_bar_indicator_arrow.png') 0 0 no-repeat;
+	width: 19px;
+	height: 11px;
+	position: absolute;
+	top:15px;
+	z-index:5;
+	margin-left: -9px; /* CR 16441 */ }
+#my_account_progress .hhonors_tip { 
+	position: absolute;
+	visibility: hidden;
+	z-index: 200;
+	top:25px; 
+	
+}
+#my_account_progress .level_tooltip {
+	position: absolute;
+	width: 175px;
+	background: white;
+	padding: 10px;
+	color: #333;
+	-moz-border-radius: 5px;
+	-webkit-box-shadow: 5px;
+	border-radius: 5px;
+	
+	/* behavior: url(/skins/common/js/PIE.htc);	*/ /* CR 18414 */
+}
+.arrow_top{
+	background: url('img/tool_tip_arrow_top.png') 0 0 no-repeat;
+	width: 19px;
+	height: 10px;
+	position: absolute;
+	top: -10px;
+}
+#my_account_progress .diamond .hhonors_tip { left:125px; }
+#my_account_progress .diamond .hhonors_tip .arrow_top { right:18px; }
+
+#my_account_progress .diamondCompleteUser { display:none; }
+
+#my_account_progress .info {}
+#my_account_progress .info a.overlay { background-image:none; padding-right:0px; }
+
+	
+#my_account_existingRes { margin-bottom: 20px; } 
+.progress_bar_nav {
+	margin: 6px 0 0 0;
+	}
+.progress_bar_nav a { text-decoration: underline !important }
+.progress_bar_nav a.selected {
+	font-weight:bold; 
+	cursor: default;
+	outline: 0;
+	text-decoration: none !important;
+	}
+.progress_bar_nav a.selected:hover {
+	color: #B38323 !important;
+	}	
+p.progress_bar_nav {
+	float: left;
+	}
+.progress_graph p{
+	width: 85%;
+	float: left;
+	margin: 0;
+}
+.progress_graph .info{
+	width: 15%;
+	float: left;
+	text-align: right;
+}
+.progress_graph .overlay-content{
+	display: none;
+}
+#my_account_progress p {
+	margin-bottom: 0px;
+	}
+.my_acct_progress_bar {
+	width: 315px;
+	background-color: #FFF;
+	height: 18px;
+	padding: 2px;
+	margin:10px 0 10px 0;
+	position:relative;
+	}
+.progress_full {
+	position:relative;
+	width: 315px;
+	height: 18px;
+	background-color: transparent;
+	background-image: url(/skins/en_US/HH/img/my_account_info/bg_progress_bar.png);
+	background-repeat:no-repeat;
+	background-position:0 -2px;
+	}
+.progress_background {
+	z-index: 2;
+	width: 261px;
+	height: 18px;
+	}
+#account_view .progress_background span.label { 
+	position:absolute;
+	right:18px;
+	top:1px;
+	color:#a09f9b;
+	font-size:10px;
+	font-weight:normal;
+	text-transform:uppercase; }
+#account_view .progress_background .progress_background span.label { 
+	position:absolute;
+	color:#515049;
+	left:5px; }
+.progress_background.blue {
+	background-image: url("/skins/en_US/HH/img/my_account_info/bg_progress_blue.gif");
+}
+#account_view .progress_background.blue span.label { color:#fff; }
+.progress_background.silver {
+	background-image: url("/skins/en_US/HH/img/my_account_info/bg_progress_silver.gif");
+}
+.progress_background.gold {
+	background-image: url("/skins/en_US/HH/img/my_account_info/bg_progress_gold.gif");
+}
+.progress_background.diamond {
+	background-image: url("/skins/en_US/HH/img/my_account_info/bg_progress_diamond.gif");
+}
+.progress_gold {
+	z-index: 1;
+	height: 18px;
+	background-color: transparent;
+	background-image: url(/skins/en_US/HH/img/my_account_info/progress_bar_gold.gif);
+	background-repeat:no-repeat;
+	}
+img.progress_indicator_arrow_top {
+	position: absolute;
+	background-color: transparent;
+	width: 19px;
+	height: 11px;
+	left: 253px;
+	top: -6px;
+	}
+img.progress_indicator_arrow_bottom {
+	position: absolute;
+	background-color: transparent;
+	width: 19px;
+	height: 11px;
+	left: 0px;
+	top: 13px;
+	}
+p.progress_bar_text {
+	margin: 0 0 0 180px;;
+	font-style:italic;
+	}
+.progress_info_circle {
+	position: absolute;
+	top: -35px;
+	left: 245px;
+	width: 69px;
+	height: 77px;
+	background-image:url("/skins/en_US/HH/img/my_account_info/progress_info_circle.png");
+	background-repeat:no-repeat;
+	}
+.progress_info_circle p {
+	text-align: center;
+	margin: 22px 0 0 0;
+	color:#FFF;
+	font-size: 14px;
+	font-weight:bold;
+	line-height: 12px;
+	}
+
+/****************
+* Footer 
+****************/
+.temp_push{
+	height: 200px;	
+}
+#footer_wrapper
+{
+	width: 970px;
+	margin: 0 auto;	
+}
+#brand_bar
+{
+	padding: 26px 0;
+	border-bottom: solid 1px #EEEEEE;
+}
+#footer_logos
+{
+	margin: 0 10px 0 0;
+	padding: 0;
+	list-style: none;
+	width: 960px;
+}
+#footer_logos li
+{
+	margin: 0;
+	padding: 0;	
+	float: left;
+	position: relative;
+}
+#footer_logos li .footer_logo {
+    background: url("img/footer_logos.png") 0 0 no-repeat;
+    display: block;
+    height: 49px;
+}
+#brand_bar_HH
+{
+	width: 185px;
+	height: 52px;
+	background: url("img/footer_logos.png") no-repeat -9px -106px transparent;
+}
+#footer_logos #brand_bar_HH a 
+{
+	display: block;
+	background: none;
+	width: 143px;
+	height: 52px;
+}
+#footer_logos .brand_name
+{
+	display: block;
+	text-indent:-9999em;
+	font-size: 0;
+}
+
+#footer_logos #brand_bar_WA .footer_logo
+{
+	background-position: 0 0;
+	margin-left: 14px;
+	width: 55px;	
+}
+#footer_logos #brand_bar_WA .footer_logo:hover
+{
+	background-position: 0 -49px;
+}
+
+#footer_logos #brand_bar_CH .footer_logo
+{
+	background-position: -55px 0;
+	width: 70px;	
+}
+#footer_logos #brand_bar_CH .footer_logo:hover
+{
+	background-position: -55px -49px;
+}
+#footer_logos #brand_bar_HI .footer_logo
+{
+	background-position: -125px 0;
+	width: 60px;	
+}
+#footer_logos #brand_bar_HI .footer_logo:hover
+{
+	background-position: -125px -49px;
+}
+#footer_logos #brand_bar_DT .footer_logo
+{
+	background-position: -185px 0;
+	width: 67px;	
+}
+#footer_logos #brand_bar_DT .footer_logo:hover
+{
+	background-position: -185px -49px;
+}
+#footer_logos #brand_bar_ES .footer_logo
+{
+	background-position: -252px 0;
+	width: 60px;	
+}
+#footer_logos #brand_bar_ES .footer_logo:hover
+{
+	background-position: -252px -49px;
+}
+#footer_logos #brand_bar_GI .footer_logo
+{
+	background-position: -315px 0;
+	width: 80px;	
+}
+#footer_logos #brand_bar_GI .footer_logo:hover
+{
+	background-position: -315px -49px;
+}
+#footer_logos #brand_bar_HP .footer_logo
+{
+	background-position: -395px 0;
+	width: 60px;	
+}
+#footer_logos #brand_bar_HP .footer_logo:hover
+{
+	background-position: -395px -49px;
+}
+#footer_logos #brand_bar_HW .footer_logo
+{
+	background-position: -455px 0;
+	width: 60px;	
+}
+#footer_logos #brand_bar_HW .footer_logo:hover
+{
+	background-position: -455px -49px;
+}
+#footer_logos #brand_bar_HT .footer_logo
+{
+	background-position: -515px 0;
+	width: 65px;	
+}
+#footer_logos #brand_bar_HT .footer_logo:hover
+{
+	background-position: -515px -49px;
+}
+#footer_logos #brand_bar_GV .footer_logo
+{
+	background-position: -580px 0;
+	width: 80px;	
+}
+#footer_logos #brand_bar_GV .footer_logo:hover
+{
+	background-position: -580px -49px;
+}
+#brand_bar .about_brands
+{
+	color: #bc9c5e;	
+	float: right;
+	margin: 25px 0 0 10px;
+}
+#brand_bar .about_brands:hover
+{		
+	color: #888;
+}
+
+
+
+#footer_nav_container
+{
+	padding: 20px 10px;
+	border-bottom: solid 1px #eeeeee;	
+}
+#footer_nav_container ul
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.footer_column_list
+{
+	width: 237px;
+	float: left;
+	color: #28557c;
+	font-size: 12px;
+}
+#footer_bottom_container h6
+{
+	margin:0px;
+	font-size:10px;
+	color:#888;
+}
+.footer_column_list ul a
+{
+	font-size: 10px;
+	color: #888888;
+}
+.footer_column_list ul li
+{
+	margin-top: 5px;	
+}
+#footer_bottom_container
+{
+	padding: 30px 10px;
+}
+.footer_links_list {
+    font-size: 10px;
+    list-style: none outside none;
+    margin: 0 0 12px 0;
+    padding: 0;
+   	color: #888; 
+   	float: left;
+}
+.footer_links_list li,
+#footer_bottom_container h6 {
+    border-right: 1px solid #888888;
+    float: left;
+    line-height: 1;
+   /*  margin-bottom: 6px; */
+    margin-right: 8px;
+    padding-right: 8px;
+    white-space: nowrap;
+    margin-bottom:2px;
+	padding-bottom:2px;
+	padding-top:2px;
+}
+#footer_bottom_container h6
+{
+	border-right: none;	
+}
+.footer_links_list .link_list_title
+{
+	border-right: medium none;
+}
+.footer_links_list li.last {
+    border-right: medium none;
+    float: left;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.brand_tooltip {
+    bottom: 56px;
+    position: absolute;
+    width: 158px;
+    z-index: 50;
+    font-size: 11px;
+    color: #999;
+    line-height: 18px;
+    padding: 10px 15px 10px 15px;
+    
+    background: #fff;
+    border: solid 1px #f0f0f0;
+    
+    -moz-box-shadow: 0 0 5px #ccc;
+	-webkit-box-shadow: 0 0 5px #ccc;
+	box-shadow: 0 0 5px #ccc;
+    
+    -moz-border-radius: 4px 4px 4px 4px;
+	-webkit-border-radius: 4px 4px 4px 4px;
+	border-radius: 4px 4px 4px 4px;
+	
+	/* visibility: hidden; 18484 - Removed style */
+	
+	behavior: url(/skins/common/js/PIE.htc);	
+    
+}
+
+* html .brand_tooltip
+{
+	border: solid 1px #2f2f2f;
+	border-radius: 0;
+}
+
+.arrow_bottom
+{
+	background: url('img/brand_tooltip_arrow.png') 0 0 no-repeat;
+	width: 20px;
+	height: 13px;
+	display: block;
+	left: 83px;
+    position: absolute;
+	width: 20px;
+	bottom: -11px;	
+}
+#footer_logos .brand_tooltip
+{
+	left: -9999px; /* left: -55px; 18484 - Removed style */
+}
+#footer_logos a.footer_logo:hover .brand_tooltip,
+#footer_logos a.footer_logo:focus .brand_tooltip { left: -55px; } /* 18484 - Added style */
+#footer_logos #brand_bar_HI a.footer_logo:hover .brand_tooltip,
+#footer_logos #brand_bar_DT a.footer_logo:hover .brand_tooltip,
+#footer_logos #brand_bar_ES a.footer_logo:hover .brand_tooltip,
+#footer_logos #brand_bar_HP a.footer_logo:hover .brand_tooltip,
+#footer_logos #brand_bar_HW a.footer_logo:hover .brand_tooltip,
+#footer_logos #brand_bar_HT a.footer_logo:hover .brand_tooltip,
+#footer_logos #brand_bar_HI a.footer_logo:focus .brand_tooltip,
+#footer_logos #brand_bar_DT a.footer_logo:focus .brand_tooltip,
+#footer_logos #brand_bar_ES a.footer_logo:focus .brand_tooltip,
+#footer_logos #brand_bar_HP a.footer_logo:focus .brand_tooltip,
+#footer_logos #brand_bar_HW a.footer_logo:focus .brand_tooltip,
+#footer_logos #brand_bar_HT a.footer_logo:focus .brand_tooltip { left: -66px; } /* 18484 - Added style */
+
+/* 18484 - Removed styles
+#brand_bar_HI .brand_tooltip
+{
+	left: -66px;
+}
+#brand_bar_DT .brand_tooltip
+{
+	left: -66px;
+}
+#brand_bar_ES .brand_tooltip
+{
+	left: -66px;
+}
+#brand_bar_HP .brand_tooltip
+{
+	left: -66px;
+}
+#brand_bar_HW .brand_tooltip
+{
+	left: -66px;
+}
+#brand_bar_HT .brand_tooltip
+{
+	left: -66px;
+} 
+*/
+
+.logged_out #utility_links_list .logged_out_view
+{
+      display: inline;
+}
+.logged_out #utility_links_list .logged_in_view
+{
+      display: none;
+}
+.logged_in #utility_links_list .logged_out_view
+{
+      display: none;
+}
+.logged_in #utility_links_list .logged_in_view
+{
+      display: inline;
+}
+
+/* style active links for IE7 and below */
+a:active { outline:1px dotted #333; }

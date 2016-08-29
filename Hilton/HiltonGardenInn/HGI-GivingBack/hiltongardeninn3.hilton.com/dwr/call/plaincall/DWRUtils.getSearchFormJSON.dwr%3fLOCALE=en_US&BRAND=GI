@@ -1,0 +1,4 @@
+throw 'allowScriptTagRemoting is false.';
+//#DWR-INSERT
+//#DWR-REPLY
+dwr.engine.remote.handleCallback("2","0","{\"searchType\":\"ALL\",\"arrivalDate\":\"19 Apr 2013\",\"arrivalDay\":19,\"arrivalMonthYear\":\"04/2013\",\"departureDate\":\"20 Apr 2013\",\"departureDay\":20,\"departureMonthYear\":\"04/2013\",\"numberOfRooms\":1,\"numberOfAdults[0]\":1,\"numberOfChildren[0]\":0,\"numberOfAdults[1]\":1,\"numberOfChildren[1]\":0,\"numberOfAdults[2]\":1,\"numberOfChildren[2]\":0,\"numberOfAdults[3]\":1,\"numberOfChildren[3]\":0,\"rewardBooking\":false,\"travelAgentRate\":false,\"aaaRate\":false,\"aarpRate\":false,\"governmentRate\":false,\"roomKeyEnable\":true}");

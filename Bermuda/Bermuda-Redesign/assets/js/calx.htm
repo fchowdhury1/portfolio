@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<script type="text/javascript">
+var prePix = new Array(3);
+function AdPx(n,t){prePix[n]=new Image();prePix[n].src="http://travel.wwte1.com/eta/"+t+".gif";}
+if (document.images) {AdPx(0,"prev_cal");AdPx(1,"next_cal");AdPx(2,"spaceit");}
+</script>
+</head><body onload="DoLoad()" text="black" bgcolor="white">
+
+<style>
+	* {margin:0;padding:0;font:8pt arial;}
+	.pointer {cursor:pointer;}
+	
+	#OutBdr {position:absolute; top:0px; left:0px; width:148px; height:194px; background-color:black;}
+	#InBdr {position:absolute; top:2px; left:2px; width:144px; height:190px; background-color:white;}
+	#NavBar td {overflow:hidden; height:20px; width:20px; border:black 1px solid; background-color:#999999;}
+	#NavBar #PImg {width:20px; height:20px; cursor:pointer; background:url(../images/common/common-sprite-sm.png) 0 -538px no-repeat; display:block; text-indent:-5000px}
+	#NavBar #TitleBar {width:94px;color:white; text-align:center;}
+	#NavBar #NImg {width:20px; height:20px; cursor:pointer; background:url(../images/common/common-sprite-sm.png) 0 -568px no-repeat; display:block; text-indent:-5000px}
+	
+	#Cal {position:relative; top:0px; left:2px; width:141px; height:141px;}
+	#Cal #Weekdays {width:141px; height:20px;}
+	#Cal #Dates {width:143px; height:121px;overflow:hidden;}
+	#Cal #Dates div {width:20px; height:20px;float:left;text-align:center;font-weight:bold;line-height:20px;}
+	.flo {float:left;}
+	.today {color:#FF0000;}
+	.invalid {color:#999999;cursor:default;}
+	.picked {background-color:#CCCCCC;}
+	#BotNav #Divider {position:relative; overflow:hidden; left:5%; width:90%; height:1px; background-color:black;}
+	#BotNav #Close {width:100%; text-align:center; line-height:20px;position:absolute;}
+</style>
+
+<div id="OutBdr">
+<div id="InBdr">
+<div id="NavBar">
+	<table>
+	<tbody><tr>
+		<td id="PrevBtn"><!-- LOC Comment: alt text --><a id="PImg" href="#" onclick="MthClk(this)"><</a></td>
+		<td id="TitleBar"></td>
+		<td id="NextBtn"><!-- LOC Comment: alt text --><a id="NImg" href="#" onclick="MthClk(this)">></a><!--<img id="NImg" src="/assets/images/common/calx/next_cal.gif" alt="Next Month" title="" onclick="MthClk(this)">--></td>
+	</tr>
+	</tbody></table>
+</div>
+
+<div id="Cal">
+	<div id="Weekdays"><!-- LOC Comment: alt text --><img id="WImg" src="/assets/images/common/calx/spaceit.gif" alt="Weekdays" title=""></div>
+	<div style="width: 140px;" id="Dates">
+		<div></div><div></div><div></div><div></div><div></div><div></div>
+		<div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div>
+		<div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div>
+		<div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div>
+		<div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div>
+		<div id="d29">29</div><div id="d30">30</div><div id="d31">31</div>
+	</div>
+</div>
+
+<div id="BotNav">
+	<div id="Divider"></div>
+	<div id="Close"><a href="javascript:CloseCal()">Close</a></div>
+</div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+function getObj(objID)
+{
+	if(document.getElementById){return document.getElementById(objID);}
+	else if(document.all){return document.all[objID];}
+	else if(document.layers){return document.layers[objID];}
+}
+function EvtObj(e){if(!e)e=window.event;return e;}
+function stopBubble(e){e.cancelBubble=true;if(e.stopPropagation)e.stopPropagation();}
+function EvtTgt(e)
+{
+	var el;
+	if(e.target)el=e.target;
+	else if(e.srcElement)el=e.srcElement;
+	if(el.nodeType==3)el=el.parentNode; // defeat Safari bug
+	return el;
+}
+var fMac=navigator.userAgent.indexOf("Mac")>=0;
+if (fMac){ getObj("Dates").style.width="140px"; } // MacIE bug
+
+var wp=window.parent;
+var cf=null;
+var g_fCL=false;
+
+var g_eInp=0;
+var g_mC,g_yC;
+var g_dtMin,g_dtMax;
+var g_rgDiv=getObj('Dates').getElementsByTagName("div");
+var g_dtPick;
+function GetCF(){if (!cf)cf=wp.getObj('CalFrame');return cf;}
+function DoLoad()
+{
+	g_fCL=true;
+}
+
+function DoCal(eD,eDP,dmin,dmax)
+{
+	var dt=wp.GetInputDate(eD.value);
+	if(null==dt&&null!=eDP){dt=wp.GetInputDate(eDP.value);}
+	g_dtPick=dt;
+	if(dmin&&""==dmin)dmin=null;
+	if(dmax&&""==dmax)dmax=null;
+	if(null==dt)
+	{
+		// Check for valid min date and use that, else use current
+		dt=new Date();
+		if(dmin&&dt<new Date(dmin))dt=new Date(dmin);
+	}
+
+	WeekLoad();
+	SetMinMax(dmin?new Date(dmin):null,dmax?new Date(dmax):null);
+
+	UpdCal(dt.getMonth(),dt.getFullYear());
+
+	g_eInp=eD;
+
+	// prevent Mozilla from flickering
+	setTimeout("ShowCal()",1);
+}
+
+function ShowCal()
+{
+	if ("none"==GetCF().style.display) {GetCF().style.display="block";}// FF drawing bug
+	GetCF().style.visibility="visible";
+}
+
+function MthClk(e){UpdCal(parseInt(e.getAttribute("month")),parseInt(e.getAttribute("year")));}
+function DtClk(e)
+{
+	e=EvtObj(e);
+	EvtTgt(e).style.backgroundColor="";
+	wp.CalDateSet(g_eInp,parseInt(EvtTgt(e).innerHTML),g_mC+1,g_yC)
+	GetCF().style.visibility="hidden";
+	wp.SetCalShown(false);
+	stopBubble(e);
+	wp.CalendarCallback();
+}
+
+function UpdCal(m,y)
+{
+	g_mC=m;g_yC=y;
+	SetTitle(m,y);
+	var c=wp.GetMonthCount(m,y);
+	var mty=DOW(1,m,y);
+	for (var i=0;i<g_rgDiv.length;i++)
+	{
+		if (i>5)
+		{
+			if (i>33)getObj("d"+(i-5)).style.display=(c>i-6?"block":"none");
+			var d = new Date(g_yC,g_mC,i-5);
+			SetClk(g_rgDiv[i],((!g_dtMin||d>=g_dtMin)&&(!g_dtMax||d<=g_dtMax)));
+		}
+		else
+		{
+			if (mty>0)
+			{
+				g_rgDiv[i].style.display="inline";
+				mty--;
+			}
+			else g_rgDiv[i].style.display="none";
+		}
+	}
+	UpdNext(m,y);
+	UpdPrev(m,y);
+
+	if (g_dtPick&&g_yC==g_dtPick.getFullYear()&&g_mC==g_dtPick.getMonth()) g_rgDiv[g_dtPick.getDate()+5].className+=" picked";
+	var t=new Date();
+	if (g_yC==t.getFullYear()&&g_mC==t.getMonth()) g_rgDiv[t.getDate()+5].className+=" today";
+	if (!fMac) g_rgDiv[0].className+=" flo"; // MSIE5.0 bug
+}
+function SetArr(e,m,y,v)
+{
+	var el=getObj(e);
+	el.setAttribute("month",m);
+	el.setAttribute("year",y);
+	el.style.visibility=v?"visible":"hidden";
+}
+function UpdNext(m,y)
+{
+	var nm=(m+1)%12; var ny=y+(m==11?1:0);
+	var hd=(!g_dtMax||!(ny>g_dtMax.getFullYear()||(ny==g_dtMax.getFullYear()&&parseInt(nm)>g_dtMax.getMonth())));
+	SetArr('NImg',nm,ny,hd);
+}
+
+function UpdPrev(m,y)
+{
+	var pm=(m+11)%12; var py=y-(m==0?1:0);
+	var hd=(!g_dtMin||!(py<g_dtMin.getFullYear()||(py==g_dtMin.getFullYear()&&parseInt(pm)<g_dtMin.getMonth())));
+	SetArr('PImg',pm,py,hd);
+}
+function DtHvr(e)
+{
+	e=EvtObj(e);
+	var aDiv = EvtTgt(e);
+	if (!g_dtPick||g_yC!=g_dtPick.getFullYear()||g_mC!=g_dtPick.getMonth()||aDiv!=g_rgDiv[g_dtPick.getDate()+5]) aDiv.style.backgroundColor="#FFCC66";
+}
+function DtExt(e)
+{
+	e=EvtObj(e);
+	var aDiv = EvtTgt(e);
+	if (!g_dtPick||g_yC!=g_dtPick.getFullYear()||g_mC!=g_dtPick.getMonth()||aDiv!=g_rgDiv[g_dtPick.getDate()+5]) aDiv.style.backgroundColor="";
+}
+function SetClk(d,f)
+{
+	d.className =(f?"pointer":"invalid");
+	d.onclick=f?DtClk:null;
+	d.onmouseover=f?DtHvr:null;
+	d.onmouseout=f?DtExt:null;
+}
+function CloseCal(){try{GetCF().style.display="none";wp.SetCalShown(false);}catch(e){return;}}
+function SetMinMax(n,x){g_dtMin=n;g_dtMax=x;}
+function FmtTitle(s){var r=s.charAt(0);for(var i=1;i<s.length;i++) r=r+" "+s.charAt(i);return r;}
+function SetTitle(m,y){var szTitle=FmtTitle(rN[m])+"&nbsp;&nbsp;"+FmtTitle(y.toString());getObj('TitleBar').innerHTML=szTitle;}
+// LOC Comment: path for week gif
+function WeekLoad(){var n="http://travel.wwte1.com/eta/eng/week"+wp.GetDowStart()+".gif";getObj('WImg').src=n;}
+// LOC Comment: Month abbr.
+var rN=new Array(12);rN[0]="JAN";rN[1]="FEB";rN[2]="MAR";rN[3]="APR";rN[4]="MAY";rN[5]="JUN";rN[6]="JUL";rN[7]="AUG";rN[8]="SEP";rN[9]="OCT";rN[10]="NOV";rN[11]="DEC";
+function DOW(d,m,y){var dt=new Date(y,m,d);return(dt.getDay()+(7-wp.GetDowStart()))%7;}
+</script>
+
+</body></html>
